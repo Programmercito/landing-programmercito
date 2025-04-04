@@ -1,0 +1,58 @@
+---
+import CenterHeader from "./header/CenterHeader.astro";
+import LeftHeader from "./header/LeftHeader.astro";
+import RightHeader from "./header/RightHeader.astro";
+import Menu from "./header/menu/Menu.astro";
+import OpcionMenu from "./opciones/OpcionMenu.astro";
+---
+
+<header
+  class="relative flex items-center justify-center py-4 px-6 bg-gray-800"
+>
+  <div class="flex items-center">
+    <!-- Logo -->
+    <LeftHeader />
+  </div>
+
+  <div class="absolute hidden md:block">
+    <!-- Opciones centradas -->
+    <CenterHeader />
+  </div>
+
+  <div class="flex items-center ml-auto">
+    <!-- Botones a la derecha -->
+    <RightHeader />
+  </div>
+
+  <Menu />
+</header>
+
+<script>
+  let menu = document.getElementById("menu");
+  let botonMenu = document.getElementById("boton-menu");
+  // Ocultar el menú al hacer clic fuera de él
+  document.addEventListener("click", (event: Event) => {
+    if (menu && botonMenu) {
+      const isClickInsideMenu = menu.contains(event.target as Node);
+      const isClickInsideButton = botonMenu.contains(event.target as Node);
+
+      if (
+        !isClickInsideMenu &&
+        !isClickInsideButton &&
+        !menu.classList.contains("hidden")
+      ) {
+        menu.classList.add("hidden");
+      }
+    }
+  });
+
+  if (botonMenu && menu) {
+    botonMenu.addEventListener("click", () => {
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+      } else {
+        menu.classList.add("hidden");
+      }
+    });
+  }
+</script>

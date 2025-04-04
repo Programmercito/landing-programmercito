@@ -1,0 +1,8 @@
+---
+import OpcionMenu from "../opciones/OpcionMenu.astro";
+import links from "../../data/menu.json";
+---
+
+<div class="flex rounded-xl py-1 text-lg">
+  {links.map((link) => <OpcionMenu link={link.url} text={link.texto}  width={link.width} />)}
+</div>

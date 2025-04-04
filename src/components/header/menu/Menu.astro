@@ -1,0 +1,24 @@
+---
+import links from "../../../data/menu.json";
+import OpcionMenu from "../../opciones/OpcionMenu.astro";
+import Titulo from "../../opciones/Titulo.astro";
+---
+
+<div
+    id="menu"
+    class="fixed inset-0 hidden md:hidden bg-primary-100 h-screen w-64"
+>
+    <div class="flex flex-col text-center">
+        <div class="mt-3">
+            <Titulo />
+        </div>
+        <p class="m-4"></p>
+        {
+            links.map((link: any) => (
+            <p class="px-2 m-0">
+               <OpcionMenu link={link.url} text={link.texto} width="100%" />
+            </p>
+            ))
+        }
+    </div>
+</div>

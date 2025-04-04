@@ -1,0 +1,22 @@
+[
+    {
+        "texto": "Inicio",
+        "url": "#inicio",
+        "width": "pequeno"
+    },
+    {
+        "texto": "Proyectos",
+        "url": "#proyectos",
+        "width": "mediano"
+    },
+    {
+        "texto": "Repositorios",
+        "url": "#repositorios",
+        "width": "grande"
+    },
+    {
+        "texto": "Habilidades",
+        "url": "#habilidades",
+        "width": "grande"
+    }
+]
