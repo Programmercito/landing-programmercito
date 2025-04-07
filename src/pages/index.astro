@@ -1,9 +1,12 @@
 ---
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
 import Layout from "../layouts/Layout.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
 ---
 
 <Layout title="Welcome to my portafolio">
-  <section class="flex flex-col md:flex-row items-center justify-between bg-white text-gray-800 px-8 py-20 max-w-6xl mx-auto">
+  <section class="flex flex-col md:flex-row items-center justify-between bg-white text-gray-800 px-8 py-2 max-w-6xl mx-auto">
     <!-- Imagen: se muestra primero en mobile -->
     <div class="order-1 md:order-2 md:w-1/3 flex justify-center mb-8 md:mb-0">
       <img src="/images/me.jpeg" alt="Joaquín Hernández" class="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-md ring-gray-300 object-cover" />
@@ -11,25 +14,27 @@ import Layout from "../layouts/Layout.astro";
   
     <!-- Texto y botones -->
     <div class="order-2 md:order-1 md:w-2/3 md:pr-12 text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-semibold mb-4">Hola! Soy Joaquín</h1>
-      <p class="text-lg md:text-xl mb-6">
-        Ingeniero de Software con más de 15 años de experiencia, siempre a la vanguardia de los lenguajes y frameworks en tecnología. He trabajado en el desarrollo de aplicaciones altamente escalables en el área financiera pública de Bolivia utilizando Java, PHP, TypeScript, JavaScript y Oracle.
+      <h1 class="text-4xl md:text-6xl font-semibold mb-4">Hola! Soy Joaquín</h1>
+      <h1 class="text-2xl md:text-3xl font-semibold mb-4">Software Senior Engineer</h1>
+      <p class=" mb-6">
+        Con más de 15 años de experiencia, siempre a la vanguardia de los lenguajes y frameworks en tecnología. He trabajado en el desarrollo de aplicaciones altamente escalables en el área financiera pública de Bolivia utilizando Java, PHP, TypeScript, JavaScript y Oracle.
       </p>
 
       <!-- Redes sociales -->
       <div class="flex gap-4 justify-center md:justify-start mt-2">
         <a href="https://www.linkedin.com/in/joaquin-h-247483aa/" target="_blank" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition">
-          <svg class="w-5 h-5 mr-2 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-1 0-1.8-.8-1.8-1.7s.8-1.8 1.8-1.8 1.7.8 1.7 1.8c0 .9-.8 1.7-1.7 1.7zm13.5 11.3h-3v-5.4c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.7 1.1-.1.2-.1.5-.1.8v5.6h-3s.1-9 0-10h3v1.4c.4-.7 1.1-1.7 2.7-1.7 2 0 3.5 1.3 3.5 4.1v6.2z"/>
-          </svg>
+          <LinkedinIcon></LinkedinIcon>
           LinkedIn
         </a>
   
         <a href="https://github.com/tu-usuario" target="_blank" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.8-.5s1.9.2 2.8.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.2 0 4.7-2.8 5.6-5.4 5.9.4.3.8 1 .8 2v3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
-          </svg>
+          <GithubIcon></GithubIcon>
           GitHub
+        </a>
+        
+        <a href="mailto:devicitobo@outlook.com" target="_blank" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition">
+          <EmailIcon></EmailIcon>
+          Email
         </a>
       </div>
     </div>
