@@ -2,32 +2,51 @@
 import EmailIcon from "../../components/icons/EmailIcon.astro";
 import GithubIcon from "../../components/icons/GithubIcon.astro";
 import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
+import TitleSection from "../../components/opciones/TitleSection.astro";
+import Section from "../../components/Section.astro";
 ---
-<section class="flex flex-col md:flex-row items-center justify-between bg-white text-gray-800 px-8 py-2 max-w-6xl mx-auto">
 
-    <!-- Texto y botones -->
-    <div class="order-2 md:order-1 md:w-2/3 md:pr-12 text-center md:text-left">
-      <h1 class="text-2xl md:text-3xl font-semibold mb-4">Proyectos</h1>
-      <p class=" mb-6">
-        Con más de 15 años de experiencia, siempre a la vanguardia de los lenguajes y frameworks en tecnología. He trabajado en el desarrollo de aplicaciones altamente escalables en el área financiera pública de Bolivia utilizando Java, PHP, TypeScript, JavaScript y Oracle.
-      </p>
+<Section>
+  <!-- Texto y botones -->
+  <div class="order-2 md:order-1 md:w-2/3 md:pr-12 text-center md:text-left">
+    <TitleSection>Proyectos</TitleSection>
+    <p class="mb-6">
+      Con más de 15 años de experiencia, siempre a la vanguardia de los
+      lenguajes y frameworks en tecnología. He trabajado en el desarrollo de
+      aplicaciones altamente escalables en el área financiera pública de Bolivia
+      utilizando Java, PHP, TypeScript, JavaScript y Oracle.
+    </p>
 
-      <!-- Redes sociales -->
-      <div class="flex flex-col justify-center gap-4 md:flex-row md:justify-start mt-2">
-        <a href="https://www.linkedin.com/in/joaquin-h-247483aa/" target="_blank" class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition">
-          <LinkedinIcon></LinkedinIcon>
-          LinkedIn
-        </a>
-  
-        <a href="https://github.com/programmercito" target="_blank" class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition">
-          <GithubIcon></GithubIcon>
-          GitHub
-        </a>
-        
-        <a href="mailto:devicitobo@outlook.com" target="_blank" class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition">
-          <EmailIcon></EmailIcon>
-          Email
-        </a>
-      </div>
+    <!-- Redes sociales -->
+    <div
+      class="flex flex-col justify-center gap-4 md:flex-row md:justify-start mt-2"
+    >
+      <a
+        href="https://www.linkedin.com/in/joaquin-h-247483aa/"
+        target="_blank"
+        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
+      >
+        <LinkedinIcon />
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/programmercito"
+        target="_blank"
+        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
+      >
+        <GithubIcon />
+        GitHub
+      </a>
+
+      <a
+        href="mailto:devicitobo@outlook.com"
+        target="_blank"
+        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
+      >
+        <EmailIcon />
+        Email
+      </a>
     </div>
-  </section>
+  </div>
+</Section>
