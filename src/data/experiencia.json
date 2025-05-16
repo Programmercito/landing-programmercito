@@ -5,17 +5,17 @@
     "startDate": "2024-04-30",
     "endDate": "",
     "highlights": [],
-    "summary": "Desarrollo de Modulos de Pago, microservicios en Java y PHP",
+    "summary": "Desarrollé módulos de pago y microservicios en Java y PHP. Fui responsable de la creación y mejora de servicios web y microservicios para escalar y optimizar los procesos del negocio.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Uruguay"
   },
   {
     "name": "Altacrest LLP",
-    "position": "Desarrollador y devop",
+    "position": "Desarrollador y DevOps",
     "startDate": "2023-12-31",
     "endDate": "2024-03-31",
     "highlights": [],
-    "summary": "Desarrollé módulos de logística de envíos utilizando Angular y Go, optimizando procesos de entrega. Implementé soluciones de DevOps con GitLab para automatizar despliegues continuos (CI/CD) en Kubernetes, asegurando alta disponibilidad y escalabilidad.",
+    "summary": "Desarrollé módulos de logística de envíos utilizando Angular y Go, optimicé procesos de entrega e implementé soluciones DevOps con GitLab para automatizar despliegues continuos (CI/CD) en Kubernetes, garantizando alta disponibilidad y escalabilidad.",
     "url": "https://www.linkedin.com/company/altacrest-jobs/",
     "location": "La Paz, Bolivia"
   },
@@ -25,17 +25,17 @@
     "startDate": "2022-08-31",
     "endDate": "2023-03-31",
     "highlights": [],
-    "summary": "- Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que permitió aumentar las capacidades de ventas de lotería en un 5%.\n\n- Optimicé la principal pasarela de pagos, llegando a aumentar la capacidad de procesamiento de pagos y, por ende, aumentar las ganancias.\n\n- Realicé la creación de Pruebas de Concepto (POC) para reemplazar crones de PHP por crones en AWS Lambda con Serverless Framework y SAM de Amazon integrados con Spring Framework para que se puedan hacer tanto APIs como crones sin necesidad de implementar más frameworks.\n\n- Desarrollé un feature para aumentar la capacidad de cobro a través de fees utilizando Microservicios, con PHP, Nodejs y Typescript.",
+    "summary": "- Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Uruguay"
   },
   {
     "name": "Ministerio de Economía y Finanzas Públicas",
-    "position": "Jefe de la Unidad de Infraestructura ",
+    "position": "Jefe de la Unidad de Infraestructura",
     "startDate": "2021-04-30",
     "endDate": "2022-08-31",
     "highlights": [],
-    "summary": "Rol de liderazgo a cargo de un equipo de 10 personas enfocadas en el desarrollo y mantenimiento del sistema.\n \n- Desarrollo de un sistema de monitoreo multiplataforma y multiprotocolo mediante bots de plataformas de chat, que vigila las 24 horas del día todos los servidores, equipos, nodos, bases de datos y aplicaciones, usando Java 17 y Jenkins para su ejecución. \n\n- Creé un framework para que los desarrolladores puedan crear más alertas en el protocolo, sistema o API que deseen, para que el sistema de monitoreo sea escalable de acuerdo a las características personalizadas de la institución. \n\n- Participé en la implementación de un sistema de Seguridad de la Información en el Área para mejorar la seguridad de los Sistemas, servidores y activos de la institución.",
+    "summary": "Lideré un equipo de 10 personas enfocado en el desarrollo y mantenimiento del sistema.\n\n- Desarrollé un sistema de monitoreo multiplataforma y multiprotocolo mediante bots de chat, que vigiló 24/7 servidores, nodos, bases de datos y aplicaciones, usando Java 17 y Jenkins.\n\n- Creé un framework para que los desarrolladores pudieran crear alertas personalizadas, haciendo el sistema de monitoreo escalable.\n\n- Participé en la implementación de un sistema de seguridad de la información para mejorar la protección de sistemas, servidores y activos institucionales.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
   },
@@ -45,7 +45,7 @@
     "startDate": "2014-03-31",
     "endDate": "2021-05-31",
     "highlights": [],
-    "summary": "Desarrollo desde cero del Sistema de Gestión Pública (SIGEP), el más grande de gestión financiera en el sector privado en Bolivia. Colaboración en otros sistemas como en el SICOES y SIGMA, sistemas de contrataciones estatales y financieros:\n\n- Desarrollo y mantenimiento de multitud de módulos parte del centro de este sistema SIGEP.\n\n- Realicé el desarrollo de la infraestructura de proyecto de código basados en Java, JSF, ADF, EJB, Angular en Typescript y Javascript. Además, realicé pruebas de tipo(PoC) para escoger frameworks y lenguajes para la creación del Sistema.\n\n- Optimización del trabajo de los desarrolladores a través del desarrollo de librerías para que puedan seguir una línea de código estándar utilizando Java. \n\n- Participé en la resolución de problemas de código de los desarrolladores como miembro del grupo responsable de la arquitectura del código, así como también scrum master de grupo.",
+    "summary": "Desarrollé desde cero el Sistema de Gestión Pública (SIGEP), el sistema financiero más grande del sector público en Bolivia. Colaboré en otros sistemas como SICOES y SIGMA, enfocados en contrataciones estatales y gestión financiera.\n\n- Desarrollé y mantuve múltiples módulos centrales del SIGEP.\n\n- Implementé la infraestructura de proyectos en Java, JSF, ADF, EJB, Angular y JavaScript. Realicé pruebas de concepto para seleccionar frameworks y lenguajes adecuados.\n\n- Optimicé el trabajo de los desarrolladores mediante librerías que estandarizaron el código en Java.\n\n- Resolví problemas de código como miembro del equipo de arquitectura y desempeñé el rol de scrum master.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
   },
@@ -55,7 +55,7 @@
     "startDate": "2009-09-30",
     "endDate": "2021-04-30",
     "highlights": [],
-    "summary": "Desarrollo de los modulos de Recursos, contabilidad y aportaciones al CORE del sistema",
+    "summary": "Desarrollé los módulos de recursos, contabilidad y aportaciones al núcleo del sistema.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
   },
@@ -65,7 +65,7 @@
     "startDate": "2006-03-31",
     "endDate": "2008-08-31",
     "highlights": [],
-    "summary": "Desarrollo de su sistema de RRHH, Vacaciones, Evaluación, y Planillas",
+    "summary": "Desarrollé el sistema de RRHH, vacaciones, evaluación y planillas.",
     "url": "https://www.linkedin.com/company/food-for-the-hungry-inc/",
     "location": "La Paz, Bolivia"
   }
