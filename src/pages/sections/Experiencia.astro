@@ -10,19 +10,39 @@ import links from "../../data/experiencia.json";
 
 <Section>
   <!-- Texto y botones -->
-  <div class="order-2 md:order-1 md:w-2/3 md:pr-12 text-center md:text-left">
+  <div class="order-2 md:order-1  md:pr-12 text-center md:text-left">
     <TitleSection>Experiencia</TitleSection>
-    {links.map((link) => (
-      <div class="mb-6">
-        <h2 class="text-xl font-semibold">{link.name}</h2>
-        <p class="text-gray-600">{link.position}</p>
-        <p class="text-gray-500">{link.startDate}</p>
-        <p class="text-gray-500">{link.endDate}</p>
-        <p class="text-gray-500">{link.url}</p>
-        <p class="text-gray-500">{link.summary}</p>
-        <p class="text-gray-500">{link.location}</p>
-
-      </div>
-    ))}
+    <div class="relative">
+      <div class="absolute left-2 top-0 bottom-0 w-1 bg-blue-100 rounded"></div>
+      {links.map((link, idx) => (
+        <div class="relative mb-12 group">
+          <div class="p-6 bg-white rounded-lg shadow border border-gray-100 group-hover:shadow-xl transition w-full">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
+              <div>
+                <h2 class="text-lg font-bold text-gray-800">{link.name}</h2>
+                <p class="text-blue-700 font-semibold">{link.position}</p>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-500 mt-2 md:mt-0">
+                <span>{link.startDate} - {link.endDate}</span>
+                {link.location && <span class="ml-4">📍 {link.location}</span>}
+              </div>
+            </div>
+            <p class="mt-2 text-gray-700 text-sm">{link.summary}</p>
+            {link.tags && Array.isArray(link.tags) && link.tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-3">
+                {link.tags.map(tag => (
+                  <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-medium">{tag}</span>
+                ))}
+              </div>
+            )}
+            {link.url && (
+              <a href={link.url} target="_blank" class="inline-block mt-4 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-700 transition text-xs font-semibold">
+                Ver más
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 </Section>
