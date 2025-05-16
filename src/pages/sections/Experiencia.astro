@@ -24,15 +24,15 @@ import links from "../../data/experiencia.json";
                   <Subtitle>{link.name}</Subtitle>
                   <p class="mb-6">{link.position}</p>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-gray-500 mt-2 md:mt-0">
-                  <span>
+                <div class="flex items-center gap-2 text-xs text-gray-500 mt-2 ">
+                  <span class="w-38 truncate">
                     {link.startDate} -{" "}
                     {link.endDate && link.endDate.trim() !== ""
                       ? link.endDate
                       : "Actualidad"}
                   </span>
                   {link.location && (
-                    <span class="ml-4 inline-block w-48 truncate">📍 {link.location}</span>
+                    <span class="ml-2 inline-block ">📍 {link.location}</span>
                   )}
                 </div>
               </div>
