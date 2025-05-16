@@ -4,6 +4,7 @@ import GithubIcon from "../../components/icons/GithubIcon.astro";
 import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
 import IconoLink from "../../components/opciones/IconoLink.astro";
 import Subtitle from "../../components/opciones/Subtitle.astro";
+import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/experiencia.json";
@@ -22,27 +23,36 @@ import links from "../../data/experiencia.json";
               <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div>
                   <Subtitle>{link.name}</Subtitle>
-                  <p class="mb-6">{link.position}</p>
+                  <TextResalt>{link.position}</TextResalt>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-gray-500 mt-2 ">
-                  <span class="w-38 truncate">
+                <div class="flex flex-col items-center gap-1 text-xs text-gray-500 mt-2 md:mt-0 md:flex-row md:items-center md:gap-2 md:text-right">
+                  <span
+                    class="md:w-38 md:truncate text-center md:text-left"
+                  >
                     {link.startDate} -{" "}
                     {link.endDate && link.endDate.trim() !== ""
                       ? link.endDate
                       : "Actualidad"}
                   </span>
                   {link.location && (
-                    <span class="ml-2 inline-block ">📍 {link.location}</span>
+                    
+                      <span class="hidden md:inline md:ml-2">
+                        📍
+                      </span>
+                      <span class="inline-block text-center md:text-left">
+                        {link.location}
+                      </span>
+                    
                   )}
                 </div>
               </div>
-              <p class="mb-6">{link.summary}</p>
+              <p class="mt-2">{link.summary}</p>
 
               {link.url && (
                 <a
                   href={link.url}
                   target="_blank"
-                  class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md justify-center
+                  class="mt-4 inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md justify-center
                shadow transform transition-all duration-300
                hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl"
                 >

@@ -25,7 +25,7 @@
     "startDate": "2022-08-31",
     "endDate": "2023-03-31",
     "highlights": [],
-    "summary": "- Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
+    "summary": "Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Montevideo, Uruguay"
   },
