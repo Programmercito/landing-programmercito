@@ -24,25 +24,18 @@ import links from "../../data/experiencia.json";
                 <div>
                   <Subtitle>{link.name}</Subtitle>
                   <TextResalt>{link.position}</TextResalt>
-                </div>
-                <div class="flex flex-col items-center gap-1 text-xs text-gray-500 mt-2 md:mt-0 md:flex-row md:items-center md:gap-2 md:text-right">
-                  <span
-                    class="md:w-38 md:truncate text-center md:text-left"
-                  >
+
                     {link.startDate} -{" "}
                     {link.endDate && link.endDate.trim() !== ""
                       ? link.endDate
                       : "Actualidad"}
-                  </span>
+                </div>
+                <div class="flex flex-col items-center md:items-end text-xs text-gray-500 mt-2 md:mt-0 md:ml-auto">
                   {link.location && (
-                    
-                      <span class="hidden md:inline md:ml-2">
-                        📍
-                      </span>
-                      <span class="inline-block text-center md:text-left">
-                        {link.location}
-                      </span>
-                    
+                    <span class="flex items-center gap-1">
+                      <span>📍</span>
+                      <span>{link.location}</span>
+                    </span>
                   )}
                 </div>
               </div>
