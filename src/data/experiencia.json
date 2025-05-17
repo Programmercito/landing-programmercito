@@ -4,7 +4,16 @@
     "position": "Desarrollador de back-end",
     "startDate": "2024-04-30",
     "endDate": "",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "PHP",
+      "SpringBoot",
+      "Mysql",
+      "JavaScript",
+      "NodeJs",
+      "TypeScript",
+      "Css"
+    ],
     "summary": "Desarrollé módulos de pago y microservicios en Java y PHP. Fui responsable de la creación y mejora de servicios web y microservicios para escalar y optimizar los procesos del negocio.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Montevideo, Uruguay"
@@ -14,7 +23,16 @@
     "position": "Desarrollador y DevOps",
     "startDate": "2023-12-31",
     "endDate": "2024-03-31",
-    "highlights": [],
+    "highlights": [
+      "Go",
+      "Angular",
+      "TypeScript",
+      "Kubernetes",
+      "GitLab",
+      "DevOps",
+      "CI/CD",
+      "PostgreSQL"
+    ],
     "summary": "Desarrollé módulos de logística de envíos utilizando Angular y Go, optimicé procesos de entrega e implementé soluciones DevOps con GitLab para automatizar despliegues continuos (CI/CD) en Kubernetes, garantizando alta disponibilidad y escalabilidad.",
     "url": "https://www.linkedin.com/company/altacrest-jobs/",
     "location": "La Paz, Bolivia"
@@ -24,7 +42,16 @@
     "position": "Fullstack Developer",
     "startDate": "2022-08-31",
     "endDate": "2023-03-31",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "PHP",
+      "SpringBoot",
+      "Mysql",
+      "JavaScript",
+      "NodeJs",
+      "TypeScript",
+      "Css"
+    ],
     "summary": "Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Montevideo, Uruguay"
@@ -34,7 +61,20 @@
     "position": "Jefe de la Unidad de Infraestructura",
     "startDate": "2021-04-30",
     "endDate": "2022-08-31",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "ADF",
+      "Spring",
+      "Angular",
+      "Javascript",
+      "Oracle",
+      "PHP",
+      "Css",
+      "HTML",
+      "TypeScript",
+      "Creacion de libs",
+      "Redis"
+    ],
     "summary": "Lideré un equipo de 10 personas enfocado en el desarrollo y mantenimiento del sistema.\n\n- Desarrollé un sistema de monitoreo multiplataforma y multiprotocolo mediante bots de chat, que vigiló 24/7 servidores, nodos, bases de datos y aplicaciones, usando Java 17 y Jenkins.\n\n- Creé un framework para que los desarrolladores pudieran crear alertas personalizadas, haciendo el sistema de monitoreo escalable.\n\n- Participé en la implementación de un sistema de seguridad de la información para mejorar la protección de sistemas, servidores y activos institucionales.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
@@ -44,7 +84,20 @@
     "position": "Responsable de Arquitectura de Soluciones Web",
     "startDate": "2014-03-31",
     "endDate": "2021-05-31",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "ADF",
+      "Spring",
+      "Angular",
+      "Javascript",
+      "Oracle",
+      "PHP",
+      "Css",
+      "HTML",
+      "TypeScript",
+      "Creacion de libs",
+      "Redis"
+    ],
     "summary": "Desarrollé desde cero el Sistema de Gestión Pública (SIGEP), el sistema financiero más grande del sector público en Bolivia. Colaboré en otros sistemas como SICOES y SIGMA, enfocados en contrataciones estatales y gestión financiera.\n\n- Desarrollé y mantuve múltiples módulos centrales del SIGEP.\n\n- Implementé la infraestructura de proyectos en Java, JSF, ADF, EJB, Angular y JavaScript. Realicé pruebas de concepto para seleccionar frameworks y lenguajes adecuados.\n\n- Optimicé el trabajo de los desarrolladores mediante librerías que estandarizaron el código en Java.\n\n- Resolví problemas de código como miembro del equipo de arquitectura y desempeñé el rol de scrum master.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
@@ -54,7 +107,20 @@
     "position": "Profesional Desarrollador",
     "startDate": "2009-09-30",
     "endDate": "2021-04-30",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "ADF",
+      "Spring",
+      "Angular",
+      "Javascript",
+      "Oracle",
+      "PHP",
+      "Css",
+      "HTML",
+      "TypeScript",
+      "Creacion de libs",
+      "Redis"
+    ],
     "summary": "Desarrollé los módulos de recursos, contabilidad y aportaciones al núcleo del sistema.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
     "location": "La Paz, Bolivia"
@@ -64,7 +130,14 @@
     "position": "Desarrollador Outsourcing",
     "startDate": "2006-03-31",
     "endDate": "2008-08-31",
-    "highlights": [],
+    "highlights": [
+      "Java",
+      "JSTL",
+      "JSP",
+      "SQL Server",
+      "HTML",
+      "CSS"
+    ],
     "summary": "Desarrollé el sistema de RRHH, vacaciones, evaluación y planillas.",
     "url": "https://www.linkedin.com/company/food-for-the-hungry-inc/",
     "location": "La Paz, Bolivia"
