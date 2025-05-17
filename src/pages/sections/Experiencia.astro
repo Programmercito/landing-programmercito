@@ -2,6 +2,7 @@
 import EmailIcon from "../../components/icons/EmailIcon.astro";
 import GithubIcon from "../../components/icons/GithubIcon.astro";
 import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
+import Chip from "../../components/opciones/Chip.astro";
 import IconoLink from "../../components/opciones/IconoLink.astro";
 import Subtitle from "../../components/opciones/Subtitle.astro";
 import TextResalt from "../../components/opciones/TextResalt.astro";
@@ -39,6 +40,14 @@ import links from "../../data/experiencia.json";
                 )}
               </div>
               <p class="mt-2">{link.summary}</p>
+
+              {link.highlights && link.highlights.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-3">
+                  {link.highlights.map((highlight) => (
+                    <Chip title={highlight} />
+                  ))}
+                </div>
+              )}
 
               {link.url && (
                 <a
