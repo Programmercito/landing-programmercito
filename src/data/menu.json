@@ -1,22 +1,18 @@
 [
+
     {
-        "texto": "Inicio",
-        "url": "#inicio",
-        "width": "pequeno"
+        "texto": "Experiencia",
+        "url": "#expreciencia",
+        "width": "grande"
     },
     {
         "texto": "Proyectos",
         "url": "#proyectos",
-        "width": "mediano"
+        "width": "grande"
     },
     {
         "texto": "Repositorios",
         "url": "#repositorios",
-        "width": "grande"
-    },
-    {
-        "texto": "Habilidades",
-        "url": "#habilidades",
         "width": "grande"
     }
 ]
