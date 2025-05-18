@@ -44,21 +44,9 @@ import links from "../../data/experiencia.json";
               {link.highlights && link.highlights.length > 0 && (
                 <div class="flex flex-wrap gap-2 mt-3">
                   {link.highlights.map((highlight) => (
-                    <Chip title={highlight} />
+                    <Chip text={highlight} />
                   ))}
                 </div>
-              )}
-
-              {link.url && (
-                <a
-                  href={link.url}
-                  target="_blank"
-                  class="mt-4 inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md justify-center
-               shadow transform transition-all duration-300
-               hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl"
-                >
-                  Ver mas
-                </a>
               )}
             </div>
           </div>
