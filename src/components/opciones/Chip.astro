@@ -1,22 +1,32 @@
 ---
 interface Props {
-    title: string;
-
+    text: string;
 }
-const { title } = Astro.props;
-const className = `flex items-center m-1 hover:bg-bg-100 justify-center  hover:text-gray-300 py-2 text-white bg-blue-500 rounded-md shadow-[0px_1px_4px_rgba(0,0,0,0.5)] hover:bg-blue-600 transition-colors duration-500 ease-in-out hover:scale-105 hover:shadow-xl`;
+const { text } = Astro.props;
+const className = `
+  relative inline-flex items-center justify-center
+  font-medium tracking-wide text-white
+  py-2 px-4
+  rounded-xl
+  bg-gradient-to-r from-blue-600 to-indigo-600
+  transition-all duration-700 ease-in-out
+  hover:scale-110 hover:shadow-[0_0_12px_var(--tw-shadow-color)] hover:shadow-primary-200
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200
+`;
 ---
 
-<div class={className}>{title}</div>
+<div class={className}>
+    <span class="z-10">{text}</span>
+</div>
 
 <style>
     .grande-width {
-        width: 110px;
+        width: 140px;
     }
     .mediano-width {
-        width: 100px;
+        width: 110px;
     }
     .pequeno-width {
-        width: 70px;
+        width: 80px;
     }
 </style>
