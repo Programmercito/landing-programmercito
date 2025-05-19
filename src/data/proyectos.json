@@ -1,0 +1,28 @@
+[
+    {
+        "description": "Libreria para seguridad de servicios web compartidos en diferentes tipos de usuarios",
+        "url": "https://github.com/Programmercito/datasealguard-java",
+        "name": "DataSealGuard",
+        "tech": [
+            "Java",
+            "Maven",
+            "Jwt"
+        ],
+        "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/DataSealGuard"
+    },
+    {
+        "description": "Libreria para guardar datos firmados en una URL, utilizando JWT, para ahorrar backends o algun otro tipo de repositorio de backend",
+        "url": "https://github.com/Programmercito/JwtLinkDinamic",
+        "name": "JwtLinkDinamic",
+        "tech": [
+            "Java",
+            "Maven",
+            "Jwt",
+            "Angular"
+        ],
+        "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/JwtLinkDinamic"
+    },
+    {
+        "description":
+    }
+]
