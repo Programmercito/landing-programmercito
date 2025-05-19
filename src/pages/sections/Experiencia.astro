@@ -15,43 +15,42 @@ import links from "../../data/experiencia.json";
   <!-- Texto y botones -->
   <div class="order-2 md:order-1 md:pr-12 text-center md:text-left">
     <TitleSection>Experiencia</TitleSection>
-    <div class="relative">
-      <div class="absolute left-2 top-0 bottom-0 w-1 bg-blue-100 rounded"></div>
-      {
-        links.map((link, idx) => (
-          <div class="relative mb-12 group">
-            <div class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full">
-              <div class="flex flex-col md:flex-row md:items-start md:justify-between">
-                <div>
-                  <Subtitle>{link.name}</Subtitle>
-                  <TextResalt>{link.position}</TextResalt>
-                  <div class="text-sm text-gray-600">
-                    {link.startDate} -{" "}
-                    {link.endDate && link.endDate.trim() !== ""
-                      ? link.endDate
-                      : "Actualidad"}
-                  </div>
-                </div>
-                {link.location && (
-                  <span class="text-xs text-gray-500 flex items-center gap-1 self-center md:self-start mt-2 md:mt-0">
-                    <span>📍</span>
-                    <span>{link.location}</span>
-                  </span>
-                )}
-              </div>
-              <p class="mt-2">{link.summary}</p>
 
-              {link.highlights && link.highlights.length > 0 && (
-                <div class="flex flex-wrap gap-2 mt-3">
-                  {link.highlights.map((highlight) => (
-                    <Chip text={highlight} />
-                  ))}
+    <div class="absolute left-2 top-0 bottom-0 w-1 bg-blue-100 rounded"></div>
+    {
+      links.map((link, idx) => (
+        <div class=" mb-12 group">
+          <div class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+              <div>
+                <Subtitle>{link.name}</Subtitle>
+                <TextResalt>{link.position}</TextResalt>
+                <div class="text-sm text-gray-600">
+                  {link.startDate} -{" "}
+                  {link.endDate && link.endDate.trim() !== ""
+                    ? link.endDate
+                    : "Actualidad"}
                 </div>
+              </div>
+              {link.location && (
+                <span class="text-xs text-gray-500 flex items-center gap-1 self-center md:self-start mt-2 md:mt-0">
+                  <span>📍</span>
+                  <span>{link.location}</span>
+                </span>
               )}
             </div>
+            <p class="mt-2">{link.summary}</p>
+
+            {link.highlights && link.highlights.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-3">
+                {link.highlights.map((highlight) => (
+                  <Chip text={highlight} />
+                ))}
+              </div>
+            )}
           </div>
-        ))
-      }
-    </div>
+        </div>
+      ))
+    }
   </div>
 </Section>

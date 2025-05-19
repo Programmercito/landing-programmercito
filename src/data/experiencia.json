@@ -1,7 +1,7 @@
 [
   {
     "name": "LITERMI",
-    "position": "Desarrollador de back-end",
+    "position": "Desarrollador back-end",
     "startDate": "2024-04-30",
     "endDate": "",
     "highlights": [
@@ -12,7 +12,7 @@
       "JavaScript",
       "NodeJs",
       "TypeScript",
-      "Css"
+      "Css", "GIT"
     ],
     "summary": "Desarrollé módulos de pago y microservicios en Java y PHP. Fui responsable de la creación y mejora de servicios web y microservicios para escalar y optimizar los procesos del negocio.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
@@ -31,7 +31,8 @@
       "GitLab",
       "DevOps",
       "CI/CD",
-      "PostgreSQL"
+      "PostgreSQL",
+      "GIT"
     ],
     "summary": "Desarrollé módulos de logística de envíos utilizando Angular y Go, optimicé procesos de entrega e implementé soluciones DevOps con GitLab para automatizar despliegues continuos (CI/CD) en Kubernetes, garantizando alta disponibilidad y escalabilidad.",
     "url": "https://www.linkedin.com/company/altacrest-jobs/",
@@ -50,7 +51,7 @@
       "JavaScript",
       "NodeJs",
       "TypeScript",
-      "Css"
+      "Css","GIT"
     ],
     "summary": "Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
@@ -73,7 +74,9 @@
       "HTML",
       "TypeScript",
       "Creacion de libs",
-      "Redis"
+      "Redis",
+      "GIT",
+      "Bots"
     ],
     "summary": "Lideré un equipo de 10 personas enfocado en el desarrollo y mantenimiento del sistema.\n\n- Desarrollé un sistema de monitoreo multiplataforma y multiprotocolo mediante bots de chat, que vigiló 24/7 servidores, nodos, bases de datos y aplicaciones, usando Java 17 y Jenkins.\n\n- Creé un framework para que los desarrolladores pudieran crear alertas personalizadas, haciendo el sistema de monitoreo escalable.\n\n- Participé en la implementación de un sistema de seguridad de la información para mejorar la protección de sistemas, servidores y activos institucionales.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
@@ -96,7 +99,8 @@
       "HTML",
       "TypeScript",
       "Creacion de libs",
-      "Redis"
+      "Redis",
+      "SVN"
     ],
     "summary": "Desarrollé desde cero el Sistema de Gestión Pública (SIGEP), el sistema financiero más grande del sector público en Bolivia. Colaboré en otros sistemas como SICOES y SIGMA, enfocados en contrataciones estatales y gestión financiera.\n\n- Desarrollé y mantuve múltiples módulos centrales del SIGEP.\n\n- Implementé la infraestructura de proyectos en Java, JSF, ADF, EJB, Angular y JavaScript. Realicé pruebas de concepto para seleccionar frameworks y lenguajes adecuados.\n\n- Optimicé el trabajo de los desarrolladores mediante librerías que estandarizaron el código en Java.\n\n- Resolví problemas de código como miembro del equipo de arquitectura y desempeñé el rol de scrum master.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
@@ -119,7 +123,8 @@
       "HTML",
       "TypeScript",
       "Creacion de libs",
-      "Redis"
+      "Redis",
+      "SVN"
     ],
     "summary": "Desarrollé los módulos de recursos, contabilidad y aportaciones al núcleo del sistema.",
     "url": "https://www.linkedin.com/company/ministerio-de-econom-a-y-finanzas-p-blicas/",
@@ -136,7 +141,8 @@
       "JSP",
       "SQL Server",
       "HTML",
-      "CSS"
+      "CSS",
+      "SVN"
     ],
     "summary": "Desarrollé el sistema de RRHH, vacaciones, evaluación y planillas.",
     "url": "https://www.linkedin.com/company/food-for-the-hungry-inc/",
