@@ -42,7 +42,7 @@ import links from "../../data/experiencia.json";
             <p class="mt-2">{link.summary}</p>
 
             {link.highlights && link.highlights.length > 0 && (
-              <div class="flex flex-wrap gap-2 mt-3">
+              <div class="flex flex-wrap gap-2 mt-3 justify-center">
                 {link.highlights.map((highlight) => (
                   <Chip text={highlight} />
                 ))}
