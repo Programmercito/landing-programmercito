@@ -2,51 +2,44 @@
 import EmailIcon from "../../components/icons/EmailIcon.astro";
 import GithubIcon from "../../components/icons/GithubIcon.astro";
 import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
+import Chip from "../../components/opciones/Chip.astro";
+import IconoLink from "../../components/opciones/IconoLink.astro";
+import Subtitle from "../../components/opciones/Subtitle.astro";
+import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
+import links from "../../data/proyectos.json";
 ---
 
 <Section>
   <!-- Texto y botones -->
-  <div class="order-2 md:order-1 md:w-2/3 md:pr-12 text-center md:text-left">
+  <div class="order-2 md:order-1 md:pr-12 text-center md:text-left">
     <TitleSection>Proyectos</TitleSection>
-    <p class="mb-6">
-      Con más de 15 años de experiencia, siempre a la vanguardia de los
-      lenguajes y frameworks en tecnología. He trabajado en el desarrollo de
-      aplicaciones altamente escalables en el área financiera pública de Bolivia
-      utilizando Java, PHP, TypeScript, JavaScript y Oracle.
-    </p>
 
-    <!-- Redes sociales -->
-    <div
-      class="flex flex-col justify-center gap-4 md:flex-row md:justify-start mt-2"
-    >
-      <a
-        href="https://www.linkedin.com/in/joaquin-h-247483aa/"
-        target="_blank"
-        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
-      >
-        <LinkedinIcon />
-        LinkedIn
-      </a>
+    <div class="absolute left-2 top-0 bottom-0 w-1 bg-blue-100 rounded"></div>
+    {
+      links.map((link, idx) => (
+        <div class=" mb-12 group">
+          <div class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+              <div>
+                <Subtitle>{link.name}</Subtitle>
+                <TextResalt></TextResalt>
 
-      <a
-        href="https://github.com/programmercito"
-        target="_blank"
-        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
-      >
-        <GithubIcon />
-        GitHub
-      </a>
+              </div>
+            </div>
+            <p class="mt-2">{link.description}</p>
 
-      <a
-        href="mailto:devicitobo@outlook.com"
-        target="_blank"
-        class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 justify-center transition"
-      >
-        <EmailIcon />
-        Email
-      </a>
-    </div>
+            {link.tech && link.tech.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-3 justify-center">
+                {link.tech.map((tec) => (
+                  <Chip text={tec} />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </Section>
