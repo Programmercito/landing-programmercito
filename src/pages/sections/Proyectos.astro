@@ -1,7 +1,9 @@
 ---
+import { Code } from "astro/components";
 import EmailIcon from "../../components/icons/EmailIcon.astro";
 import GithubIcon from "../../components/icons/GithubIcon.astro";
 import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
+import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import Chip from "../../components/opciones/Chip.astro";
 import IconoLink from "../../components/opciones/IconoLink.astro";
 import Subtitle from "../../components/opciones/Subtitle.astro";
@@ -9,6 +11,8 @@ import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/proyectos.json";
+import CodeIcon from "../../components/icons/CodeIcon.astro";
+import DeployIcon from "../../components/icons/DeployIcon.astro";
 ---
 
 <Section>
@@ -24,8 +28,6 @@ import links from "../../data/proyectos.json";
             <div class="flex flex-col md:flex-row md:items-start md:justify-between">
               <div>
                 <Subtitle>{link.name}</Subtitle>
-                <TextResalt></TextResalt>
-
               </div>
             </div>
             <p class="mt-2">{link.description}</p>
@@ -37,6 +39,16 @@ import links from "../../data/proyectos.json";
                 ))}
               </div>
             )}
+            <div class="flex flex-col justify-center gap-4 md:flex-row md:justify-start mt-2">
+              <BordeadoIcon link={link.url}>
+                <CodeIcon />
+                Código fuente
+              </BordeadoIcon>
+              <BordeadoIcon link={link.despliegue}>
+                <DeployIcon />
+                Demo
+              </BordeadoIcon>
+            </div>
           </div>
         </div>
       ))
