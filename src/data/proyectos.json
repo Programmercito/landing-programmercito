@@ -23,6 +23,50 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/JwtLinkDinamic"
     },
     {
-        "description":
+        "description": "Libreria para usar Google Adsense en Angular16 +",
+        "url": "https://github.com/Programmercito/osbo-adsense-angular",
+        "name": "OsboAdsenseAngular",
+        "tech": [
+            "Angular",
+            "Typescript",
+            "GoogleAdsense"
+        ],
+        "despliegue": "https://www.npmjs.com/package/osbo-adsense-angular"
+    },
+    {
+        "description": "Bot para Telgram que permite hacer chats entre usuarios",
+        "url": "https://github.com/Programmercito/date-bots",
+        "name": "DateBots",
+        "tech": [
+            "Java",
+            "SpringBoot",
+            "ActiveMQ",
+            "Telegram Api",
+            "Sql lite"
+        ],
+        "despliegue": "https://t.me/amistadbo"
+    },
+    {
+        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de telegram",
+        "url": "https://github.com/Programmercito/scraping-cines",
+        "name": "ScrapingCines",
+        "tech": [
+            "Playwright",
+            "Typescript"
+        ],
+        "despliegue": "https://t.me/cinesbo"
+    },
+    {
+        "descripcion": "Bot con IAS de Meta, proyecto de demostracion para usar el api de OLLAMA",
+        "url": "https://github.com/Programmercito/bot-microia",
+        "name": "BotMicroia",
+        "tech": [
+            "Java",
+            "Ollama",
+            "SpringBoot",
+            "ActiveMQ",
+            "Telegram Api"
+        ],
+        "despliegue": "https://t.me/Llamitabot"
     }
 ]
