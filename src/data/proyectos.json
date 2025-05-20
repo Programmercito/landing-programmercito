@@ -1,6 +1,6 @@
 [
     {
-        "description": "Libreria para seguridad de servicios web compartidos en diferentes tipos de usuarios",
+        "description": "Librería para seguridad de servicios web compartidos en diferentes tipos de usuarios. Permite proteger endpoints y recursos usando JWT y está diseñada para integrarse fácilmente en proyectos Java con Maven. Disponible en Sonatype Central.",
         "url": "https://github.com/Programmercito/datasealguard-java",
         "name": "DataSealGuard",
         "tech": [
@@ -11,7 +11,7 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/DataSealGuard"
     },
     {
-        "description": "Libreria para guardar datos firmados en una URL, utilizando JWT, para ahorrar backends o algun otro tipo de repositorio de backend",
+        "description": "Librería para guardar datos firmados en una URL, utilizando JWT, para ahorrar backends o algún otro tipo de repositorio de backend. Facilita la transmisión segura de datos entre aplicaciones Java y Angular, aprovechando JWT para la autenticidad y seguridad. Disponible en Sonatype Central.",
         "url": "https://github.com/Programmercito/JwtLinkDinamic",
         "name": "JwtLinkDinamic",
         "tech": [
@@ -23,7 +23,7 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/JwtLinkDinamic"
     },
     {
-        "description": "Libreria para usar Google Adsense en Angular16 +",
+        "description": "Librería para usar Google Adsense en Angular16+. Permite integrar anuncios de Google Adsense de forma sencilla y eficiente en aplicaciones desarrolladas con Angular, utilizando TypeScript. Publicada en NPM.",
         "url": "https://github.com/Programmercito/osbo-adsense-angular",
         "name": "OsboAdsenseAngular",
         "tech": [
@@ -34,7 +34,7 @@
         "despliegue": "https://www.npmjs.com/package/osbo-adsense-angular"
     },
     {
-        "description": "Bot para Telgram que permite hacer chats entre usuarios",
+        "description": "Bot para Telegram que permite hacer chats entre usuarios. Desarrollado con Java, SpringBoot y ActiveMQ, utiliza la API de Telegram y una base de datos Sql lite para gestionar las conversaciones. El bot está disponible en Telegram.",
         "url": "https://github.com/Programmercito/date-bots",
         "name": "DateBots",
         "tech": [
@@ -47,7 +47,7 @@
         "despliegue": "https://t.me/amistadbo"
     },
     {
-        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de telegram",
+        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
         "url": "https://github.com/Programmercito/scraping-cines",
         "name": "ScrapingCines",
         "tech": [
@@ -57,7 +57,7 @@
         "despliegue": "https://t.me/cinesbo"
     },
     {
-        "descripcion": "Bot con IAS de Meta, proyecto de demostracion para usar el api de OLLAMA",
+        "description": "Bot con IAs de Meta, proyecto de demostración para usar el API de OLLAMA. Desarrollado en Java y SpringBoot, integra ActiveMQ y la API de Telegram para interactuar con usuarios y demostrar capacidades de inteligencia artificial. Disponible en Telegram.",
         "url": "https://github.com/Programmercito/bot-microia",
         "name": "BotMicroia",
         "tech": [
