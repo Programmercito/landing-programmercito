@@ -1,4 +1,11 @@
-<section
+---
+interface Props {
+    id: string;
+
+}
+const {id } = Astro.props;
+---
+<section id={id}
     class="flex flex-col md:flex-row mt-3 items-center justify-between bg-white text-gray-800 px-8 py-2 max-w-6xl mx-auto"
 >
     <slot />
