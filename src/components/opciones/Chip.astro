@@ -5,18 +5,18 @@ interface Props {
 const { text } = Astro.props;
 const className = `
   items-center justify-center
-  font-medium tracking-wide text-white
+  tracking-wide 
   py-2 px-4
   rounded-xl
   bg-gradient-to-r from-blue-600 to-indigo-600
   transition-all duration-700 ease-in-out
   hover:scale-110 hover:shadow-[0_0_12px_var(--tw-shadow-color)] hover:shadow-primary-200
-  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200 bg-bg-300 text-sm
 `;
 ---
 
 <div class={className}>
-    <span class="z-10">{text}</span>
+    <span>{text}</span>
 </div>
 
 <style>
