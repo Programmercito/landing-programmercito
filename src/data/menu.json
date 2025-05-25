@@ -5,6 +5,11 @@
         "width": "grande"
     },
     {
+        "texto": "Habilidades",
+        "url": "#habilidades",
+        "width": "grande"
+    },    
+    {
         "texto": "Repositorios",
         "url": "#repositorios",
         "width": "grande"
