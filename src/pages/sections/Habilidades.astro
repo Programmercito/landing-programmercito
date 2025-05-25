@@ -1,0 +1,38 @@
+---
+import Chip from "../../components/opciones/Chip.astro";
+import Subtitle from "../../components/opciones/Subtitle.astro";
+import TextResalt from "../../components/opciones/TextResalt.astro";
+import TitleSection from "../../components/opciones/TitleSection.astro";
+import Section from "../../components/Section.astro";
+import habilidades from "../../data/habilidades.json";
+import IconoLink from "../../components/opciones/IconoLink.astro";
+---
+
+<Section id="habilidades">
+    <!-- Texto y botones -->
+    <div class="order-2 md:order-1 md:pr-12 text-center md:text-left">
+        <TitleSection>Habilidades</TitleSection>
+
+        <div class="mb-12 group">
+            <div
+                class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full"
+            >
+                <div class="flex flex-wrap gap-2 mt-3 justify-center">
+                    {
+                        habilidades.map((habilidad) => (
+                            <IconoLink link="#" title={habilidad.name}>
+                                <>
+                                    <img
+                                        src={habilidad.icon}
+                                        alt={habilidad.name}
+                                        class="w-12 h-12" 
+                                    />
+                                </>
+                            </IconoLink>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</Section>
