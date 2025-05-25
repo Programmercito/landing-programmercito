@@ -1,25 +1,95 @@
-[
-  "Java",
-  "TypeScript",
-  "PHP",
-  "Oracle",
-  "Mysql",
-  "Sql Server",
-  "Spring boot",
-  "Angular",
-  "Docker",
-  "Kubernetes",
-  "Git",
-  "SVN",
-  "REST APIs",
-  "Microservices",
-  "SQL",
-  "Redis",
-  "CI/CD",
-  "Scrum",
-  "Software Architecture",
-  "Full Stack Development",
-  "DevOps",
-  "ADF framework",  
-  "JavaScript"
+ [
+  {
+    "name": "Java",
+    "icon": "/svg/java.svg"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "/svg/typescript.svg"
+  },
+  {
+    "name": "PHP",
+    "icon": "/svg/php.svg"
+  },
+  {
+    "name": "Oracle",
+    "icon": "/svg/oracle.svg"
+  },
+  {
+    "name": "Mysql",
+    "icon": "/svg/mysql.svg"
+  },
+  {
+    "name": "Sql Server",
+    "icon": "/svg/sqlserver.svg"
+  },
+  {
+    "name": "Spring boot",
+    "icon": "/svg/sprintboot.svg"
+  },
+  {
+    "name": "Angular",
+    "icon": "/svg/angular.svg"
+  },
+  {
+    "name": "Docker",
+    "icon": "/svg/docker.svg"
+  },
+  {
+    "name": "Kubernetes",
+    "icon": "/svg/kubernetes.svg"
+  },
+  {
+    "name": "Git",
+    "icon": "/svg/git.svg"
+  },
+  {
+    "name": "SVN",
+    "icon": "/svg/svn.svg"
+  },
+  {
+    "name": "REST APIs",
+    "icon": "/svg/rest.svg"
+  },
+  {
+    "name": "Microservices",
+    "icon": "/svg/microservices.svg"
+  },
+  {
+    "name": "SQL",
+    "icon": "/svg/sql.svg"
+  },
+  {
+    "name": "Redis",
+    "icon": "/svg/redis.svg"
+  },
+  {
+    "name": "CI/CD",
+    "icon": "/svg/cicd.svg"
+  },
+  {
+    "name": "Scrum",
+    "icon": "/svg/scrum.svg"
+  },
+  {
+    "name": "Software Architecture",
+    "icon": "/svg/softarchi.svg"
+  },
+  {
+    "name": "Full Stack Development",
+    "icon": "/svg/fullstack.svg"
+  },
+  {
+    "name": "DevOps",
+    "icon": "/svg/devops.svg"
+  },
+  {
+    "name": "ADF framework",
+    "icon": "/svg/adf.svg"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "/svg/javascript.svg"
+  }
+
 ]
