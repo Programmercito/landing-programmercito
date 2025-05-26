@@ -1,9 +1,54 @@
 ---
-let year = new Date().getFullYear();
+import GithubIcon from "../icons/GithubIcon.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import EmailIcon from "../icons/EmailIcon.astro";
 
+let year = new Date().getFullYear();
 ---
-<footer class="bg-gray-800 text-white py-4 mt-12">
-    <div class="container mx-auto text-center">
-        <p>&copy; {year} Devcito.</p>
+
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <!-- Links de contacto y código -->
+            <div class="flex items-center space-x-6">
+                <a 
+                    href="https://github.com/programmercito" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center space-x-2 hover:text-blue-400 transition-colors duration-200"
+                    aria-label="GitHub"
+                >
+                    <GithubIcon />
+                    <span class="hidden sm:inline">GitHub</span>
+                </a>
+                
+                <a 
+                    href="https://github.com/programmercito/landing-programmercito" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center space-x-2 hover:text-blue-400 transition-colors duration-200"
+                    aria-label="Código fuente"
+                >
+                    <CodeIcon />
+                    <span class="hidden sm:inline">Fork in</span>
+                </a>
+                
+                <a 
+                    href="mailto:devcitobo@outlook.com" 
+                    class="flex items-center space-x-2 hover:text-blue-400 transition-colors duration-200"
+                    aria-label="Email"
+                >
+                    <EmailIcon />
+                    <span class="hidden sm:inline">Email</span>
+                </a>
+            </div>
+            
+            <!-- Información de licencia y derechos -->
+            <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 text-sm text-gray-300">
+                <span class="hover:text-white transition-colors duration-200">Licencia MIT</span>
+                <span class="hidden md:inline">|</span>
+                <span>&copy; {year} devcito</span>
+            </div>
+        </div>
     </div>
 </footer>
