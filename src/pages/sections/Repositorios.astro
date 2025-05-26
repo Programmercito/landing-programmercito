@@ -31,6 +31,7 @@ const repos = data.map((repo: GithubRepo) => ({
   forks_count: repo.forks_count,
   updated_at: repo.updated_at
 }));
+
 ---
 
 <Section id="repositorios">
@@ -47,7 +48,7 @@ const repos = data.map((repo: GithubRepo) => ({
                 <div>
                   <div class="flex flex-col md:flex-row md:items-start md:justify-between">
                     <div>
-                      <Subtitle>{repo.name}</Subtitle>
+                      <Subtitle>{repo.name.toUpperCase()}</Subtitle>
                     </div>
                   </div>
                   <p>{repo.description}</p>
