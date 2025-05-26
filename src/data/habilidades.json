@@ -1,95 +1,95 @@
  [
   {
     "name": "Java",
-    "icon": "/svg/java.svg"
+    "icon": "Java"
   },
   {
     "name": "TypeScript",
-    "icon": "/svg/typescript.svg"
+    "icon": "TypeScript"
   },
   {
     "name": "PHP",
-    "icon": "/svg/php.svg"
+    "icon": "Php"
   },
   {
     "name": "Oracle",
-    "icon": "/svg/oracle.svg"
+    "icon": "Oracle"
   },
   {
     "name": "Mysql",
-    "icon": "/svg/mysql.svg"
+    "icon": "Mysql"
   },
   {
     "name": "Sql Server",
-    "icon": "/svg/sqlserver.svg"
+    "icon": "Sqlserver"
   },
   {
     "name": "Spring boot",
-    "icon": "/svg/sprintboot.svg"
+    "icon": "Sprintboot"
   },
   {
     "name": "Angular",
-    "icon": "/svg/angular.svg"
+    "icon": "Angular"
   },
   {
     "name": "Docker",
-    "icon": "/svg/docker.svg"
+    "icon": "Docker"
   },
   {
     "name": "Kubernetes",
-    "icon": "/svg/kubernetes.svg"
+    "icon": "kubernetes"
   },
   {
     "name": "Git",
-    "icon": "/svg/git.svg"
+    "icon": "Git"
   },
   {
     "name": "SVN",
-    "icon": "/svg/svn.svg"
+    "icon": "Svn"
   },
   {
     "name": "REST APIs",
-    "icon": "/svg/rest.svg"
+    "icon": "Rest"
   },
   {
     "name": "Microservices",
-    "icon": "/svg/microservices.svg"
+    "icon": "Microservices"
   },
   {
     "name": "SQL",
-    "icon": "/svg/sql.svg"
+    "icon": "Sql"
   },
   {
     "name": "Redis",
-    "icon": "/svg/redis.svg"
+    "icon": "Redis"
   },
   {
     "name": "CI/CD",
-    "icon": "/svg/cicd.svg"
+    "icon": "Cicd"
   },
   {
     "name": "Scrum",
-    "icon": "/svg/scrum.svg"
+    "icon": "Scrum"
   },
   {
     "name": "Software Architecture",
-    "icon": "/svg/softarchi.svg"
+    "icon": "Softarchi"
   },
   {
     "name": "Full Stack Development",
-    "icon": "/svg/fullstack.svg"
+    "icon": "Fullstack"
   },
   {
     "name": "DevOps",
-    "icon": "/svg/devops.svg"
+    "icon": "Devops"
   },
   {
     "name": "ADF framework",
-    "icon": "/svg/adf.svg"
+    "icon": "Adf"
   },
   {
     "name": "JavaScript",
-    "icon": "/svg/javascript.svg"
+    "icon": "Javascript"
   }
 
 ]

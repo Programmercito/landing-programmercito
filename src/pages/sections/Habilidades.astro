@@ -1,7 +1,4 @@
 ---
-import Chip from "../../components/opciones/Chip.astro";
-import Subtitle from "../../components/opciones/Subtitle.astro";
-import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import habilidades from "../../data/habilidades.json";
@@ -67,15 +64,8 @@ const iconComponents = {
                 <div class="flex flex-wrap gap-2 mt-3 justify-center">
                     {
                         habilidades.map((habilidad) => (
-                            <IconoLink link="#" title={habilidad.name}>
-                                <>
-                                    <img
-                                        src={habilidad.icon}
-                                        alt={habilidad.name}
-                                        class="w-12 h-12" 
-                                    />
-                                </>
-                            </IconoLink>
+                            <div></div>                        
+                        
                         ))
                     }
                 </div>
