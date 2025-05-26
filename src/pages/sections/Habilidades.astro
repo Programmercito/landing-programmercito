@@ -59,9 +59,9 @@ const iconComponents = {
     <div class="order-2 md:order-1 md:pr-12 text-center md:text-left">
         <TitleSection>Habilidades</TitleSection>
 
-        <div class="mb-12 group">
+        <div class="mb-12">
             <div
-                class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full"
+                class="p-3 bg-white rounded-lg shadow transition-all w-full"
             >
                 <div class="flex flex-wrap gap-2 mt-3 justify-center">
                     {
@@ -69,8 +69,13 @@ const iconComponents = {
                             const Icon = iconComponents[habilidad.icon as keyof typeof iconComponents];
                             return (
                               <IconoLink text={habilidad.name} link="" title={habilidad.name}>
-                                <div class="h-20 w-20 mt-2 mb-2 text-gray-300">
-                                {Icon && <Icon/>}
+                                <div class="relative flex flex-col items-center h-20 w-20 mt-2 mb-2 text-gray-300 group">
+                                  {Icon && <Icon />}
+                                  <span class="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full
+                                               bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100
+                                               transition-all duration-200 z-10 whitespace-nowrap">
+                                    {habilidad.name}
+                                  </span>
                                 </div>
                               </IconoLink>
                             );
