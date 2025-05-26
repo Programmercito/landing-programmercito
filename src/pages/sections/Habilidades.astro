@@ -25,7 +25,7 @@ import Sql from "../../components/icons/Sql.astro";
 import Sqlserver from "../../components/icons/Sqlserver.astro";
 import Svn from "../../components/icons/Svn.astro";
 import Typescript from "../../components/icons/Typescript.astro";
-import { init } from "astro/virtual-modules/prefetch.js";
+import Rest from "../../components/icons/Rest.astro";
 
 const iconComponents = {
     Adf,
@@ -50,6 +50,7 @@ const iconComponents = {
     Sqlserver,
     Svn,
     Typescript,
+    Rest
 };
 ---
 
@@ -68,7 +69,9 @@ const iconComponents = {
                             const Icon = iconComponents[habilidad.icon as keyof typeof iconComponents];
                             return (
                               <IconoLink link="#" title={habilidad.name}>
-                                {Icon && <Icon class="w-12 h-12" />}
+                                <div class="h-16 w-16">
+                                {Icon && <Icon/>}
+                                </div>
                               </IconoLink>
                             );
                         })
