@@ -72,11 +72,11 @@
     "icon": "Scrum"
   },
   {
-    "name": "Software Architecture",
+    "name": "Architecture",
     "icon": "Softarchi"
   },
   {
-    "name": "Full Stack Development",
+    "name": "Full Stack",
     "icon": "Fullstack"
   },
   {
@@ -84,7 +84,7 @@
     "icon": "Devops"
   },
   {
-    "name": "ADF framework",
+    "name": "ADF (Oracle)",
     "icon": "Adf"
   },
   {
