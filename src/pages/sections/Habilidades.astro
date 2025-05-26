@@ -68,7 +68,7 @@ const iconComponents = {
                         habilidades.map((habilidad) => {
                             const Icon = iconComponents[habilidad.icon as keyof typeof iconComponents];
                             return (
-                              <IconoLink link="#" title={habilidad.name}>
+                              <IconoLink text="dddd" link="#" title={habilidad.name}>
                                 <div class="h-16 w-16 text-gray-300">
                                 {Icon && <Icon/>}
                                 </div>
