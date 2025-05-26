@@ -64,11 +64,16 @@ const iconComponents = {
             >
                 <div class="flex flex-wrap gap-2 mt-3 justify-center">
                     {
-                        habilidades.map(
-                            (habilidad) => (
-                                console.log("dddd"), console.log("ddd")
-                            ),
-                        )
+                        habilidades.map((habilidad) => {
+                            const Icon = iconComponents[habilidad.icon as keyof typeof iconComponents];
+                            return (
+                              <IconoLink link="#" title={habilidad.name}>
+                                <div class="h-3 w-3">
+                                {Icon && <Icon/>}
+                                </div>
+                              </IconoLink>
+                            );
+                        })
                     }
                 </div>
             </div>
