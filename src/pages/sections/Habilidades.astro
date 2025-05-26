@@ -68,9 +68,7 @@ const iconComponents = {
                             const Icon = iconComponents[habilidad.icon as keyof typeof iconComponents];
                             return (
                               <IconoLink link="#" title={habilidad.name}>
-                                <div class="h-3 w-3">
-                                {Icon && <Icon/>}
-                                </div>
+                                {Icon && <Icon class="w-12 h-12" />}
                               </IconoLink>
                             );
                         })
