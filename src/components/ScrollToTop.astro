@@ -1,0 +1,37 @@
+---
+// No props needed
+---
+
+<button
+    id="scrollToTopBtn"
+    aria-label="Volver arriba"
+    class="fixed bottom-6 right-6 z-50 bg-primary-100 text-white p-3 rounded-full shadow-2xl hover:bg-primary-200 transition-all duration-300 flex items-center justify-center group"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+    style="display: none;"
+>
+    <svg
+        class="w-7 h-7 group-hover:scale-125 transition-transform duration-200"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+    >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"
+        ></path>
+    </svg>
+</button>
+
+<script>
+    // Mostrar el botón solo cuando se hace scroll hacia abajo
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", () => {
+            const btn = document.getElementById("scrollToTopBtn");
+            if (!btn) return; 
+            if (window.scrollY > 200) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        });
+    }
+</script>
