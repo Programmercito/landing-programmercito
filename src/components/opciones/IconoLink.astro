@@ -14,9 +14,5 @@ const { link, title, text } = Astro.props;
     class="bg-bg-200 shadow-2xl shadow-black/60 mr-1 hover:bg-bg-100 text-white font-bold py-2 px-2 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.75)]"
 >
     <slot />
-    {text && (
-      <span class="scale-0 block text-xs mt-1 transition-all duration-300 group-hover:scale-110 group-hover:text-accent-100">
-        {text}
-      </span>
-    )}
+
 </a>
