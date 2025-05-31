@@ -16,7 +16,7 @@ import Titulo from "../../opciones/Titulo.astro";
         {
             links.map((link: any) => (
             <p class="px-2 m-0">
-               <OpcionMenu link={link.url} text={link.texto} width="100%" />
+               <OpcionMenu id={link.url+"_btn"} link={link.url} text={link.texto} width="100%" />
             </p>
             ))
         }

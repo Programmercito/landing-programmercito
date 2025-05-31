@@ -7,6 +7,7 @@ import links from "../../data/menu.json";
   <ul class="nav-menu">
     {links.map((link) => (
       <OpcionMenu 
+        id={link.url+"_btn"}
         link={link.url} 
         text={link.texto}  
         width={link.width} 

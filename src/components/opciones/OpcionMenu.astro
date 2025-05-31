@@ -3,13 +3,14 @@ interface Props {
     link: string;
     text: string;
     width: string;
+    id: string;
 }
-const { link, text, width } = Astro.props;
+const { link, text, width,id } = Astro.props;
 ---
 
-<li class="nav-item">
+<li class="nav-item" >
     <a 
-        href={link}        class={`
+        href={link}  id={id}       class={`
             nav-link ${width}-width
             relative inline-flex items-center justify-center
             font-semibold tracking-wide text-gray-700 dark:text-gray-300
@@ -24,8 +25,8 @@ const { link, text, width } = Astro.props;
             backdrop-blur-sm
         `}
     >
-        <span class="relative z-10">{text}</span>
-        <span class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
+        <span class="relative z-10" id={id}>{text}</span>
+        <span class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 transition-opacity duration-300 hover:opacity-100" id={id}></span>
     </a>
 </li>
 
