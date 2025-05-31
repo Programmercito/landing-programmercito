@@ -5,29 +5,80 @@ interface Props {
     width: string;
 }
 const { link, text, width } = Astro.props;
-const className = `
-  relative inline-flex items-center justify-center
-  font-medium tracking-wide text-white
-  ${width}-width py-2 px-4
-  rounded-xl 
-  bg-gradient-to-r from-blue-600 to-indigo-600
-  transition-all duration-700 ease-in-out
-  hover:scale-105 hover:shadow-[0_0_12px_var(--tw-shadow-color)] hover:shadow-primary-200
-`;
 ---
 
-<a href={link} class={className}>
-    <span class="z-10">{text}</span>
-</a>
+<li class="nav-item">
+    <a 
+        href={link} 
+        class={`
+            nav-link ${width}-width
+            relative inline-flex items-center justify-center
+            font-semibold tracking-wide text-gray-700 dark:text-gray-300
+            py-3 px-6 mx-1
+            rounded-lg 
+            transition-all duration-300 ease-in-out
+            hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-500
+            hover:text-white hover:shadow-lg hover:shadow-blue-500/25
+            hover:-translate-y-0.5
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+            border border-transparent hover:border-blue-400
+            backdrop-blur-sm
+        `}
+    >
+        <span class="relative z-10">{text}</span>
+        <span class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
+    </a>
+</li>
 
 <style>
+    .nav-item {
+        list-style: none;
+    }
+    
+    .nav-link {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s ease-in-out;
+    }
+    
+    .nav-link:hover::before {
+        left: 100%;
+    }
+    
     .grande-width {
-        width: 140px;
+        min-width: 140px;
     }
     .mediano-width {
-        width: 110px;
+        min-width: 110px;
     }
     .pequeno-width {
-        width: 80px;
+        min-width: 80px;
+    }
+    
+    /* Efecto de subrayado animado */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #6366f1);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+    
+    .nav-link:hover::after {
+        width: 80%;
     }
 </style>
