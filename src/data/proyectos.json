@@ -11,7 +11,7 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/DataSealGuard"
     },
     {
-        "description": "Librería para guardar datos firmados en una URL, utilizando JWT, para ahorrar backends o algún otro tipo de repositorio de backend. Facilita la transmisión segura de datos entre aplicaciones Java y Angular, aprovechando JWT para la autenticidad y seguridad. Disponible en Sonatype Central.",
+        "description": "Librería Java para generar enlaces con parámetros firmados mediante JWT usando criptografía asimétrica. Permite que un backend independiente firme el contenido de un parámetro, el cual se envía como parte de un link. En la web, sin necesidad de backend, el frontend valida el JWT con la clave pública y, solo si la firma es válida, muestra el contenido. Así, se garantiza la integridad y autenticidad de los datos en páginas estáticas, evitando manipulaciones y eliminando la necesidad de un backend para la verificación.",
         "url": "https://github.com/Programmercito/JwtLinkDinamic",
         "name": "JwtLinkDinamic",
         "tech": [
