@@ -7,13 +7,12 @@ import OpcionMenu from "./opciones/OpcionMenu.astro";
 import menu from "../data/menu.json";
 ---
 
-<header class="flex items-center justify-center py-4 px-6 bg-gray-800 sticky top-0 z-50">
+<header class="flex items-center justify-center py-4 px-6 bg-gray-800 ">
   <div class="flex items-center">
     <!-- Logo -->
     <LeftHeader />
   </div>
-
-  <div class="absolute hidden md:block">
+  <div class="fixed top-4 left-1/2 transform -translate-x-1/2 hidden md:block z-50">
     <!-- Opciones centradas -->
     <CenterHeader />
   </div>
