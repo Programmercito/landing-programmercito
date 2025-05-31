@@ -3,6 +3,62 @@ import OpcionMenu from "../opciones/OpcionMenu.astro";
 import links from "../../data/menu.json";
 ---
 
-<div class="flex rounded-xl py-1 text-lg">
-  {links.map((link) => <OpcionMenu link={link.url} text={link.texto}  width={link.width} />)}
-</div>
+<nav class="main-navigation" role="navigation" aria-label="Navegación principal">
+  <ul class="nav-menu">
+    {links.map((link) => (
+      <OpcionMenu 
+        link={link.url} 
+        text={link.texto}  
+        width={link.width} 
+      />
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .main-navigation {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .main-navigation:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  @media (max-width: 768px) {
+    .main-navigation {
+      padding: 6px 12px;
+    }
+    
+    .nav-menu {
+      gap: 2px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-menu {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .main-navigation {
+      padding: 12px;
+    }
+  }
+</style>
