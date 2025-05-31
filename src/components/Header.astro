@@ -4,11 +4,10 @@ import LeftHeader from "./header/LeftHeader.astro";
 import RightHeader from "./header/RightHeader.astro";
 import Menu from "./header/menu/Menu.astro";
 import OpcionMenu from "./opciones/OpcionMenu.astro";
+import menu from "../data/menu.json";
 ---
 
-<header
-  class="relative flex items-center justify-center py-4 px-6 bg-gray-800"
->
+<header class="relative flex items-center justify-center py-4 px-6 bg-gray-800">
   <div class="flex items-center">
     <!-- Logo -->
     <LeftHeader />
@@ -27,19 +26,21 @@ import OpcionMenu from "./opciones/OpcionMenu.astro";
   <Menu />
 </header>
 
-<script>
+<script define:vars={{ menuData: menu }} is:inline>
   let menu = document.getElementById("menu");
   let botonMenu = document.getElementById("boton-menu");
   // Ocultar el menú al hacer clic fuera de él
-  document.addEventListener("click", (event: Event) => {
+  document.addEventListener("click", (event) => {
+    // creo un array hardoceado con "hola" y "hola2"
+    console.log("Click detected", event.target);
     if (menu && botonMenu) {
-      const isClickInsideMenu = menu.contains(event.target as Node);
-      const isClickInsideButton = botonMenu.contains(event.target as Node);
-
+      const notisClickInsideMenu = !menu.contains(event.target);
+      const notisClickInsideButton = !botonMenu.contains(event.target);
+      const compo = event.target;
       if (
-        !isClickInsideMenu &&
-        !isClickInsideButton &&
-        !menu.classList.contains("hidden")
+        (notisClickInsideMenu &&
+        notisClickInsideButton &&
+        !menu.classList.contains("hidden")) || (compo.id && verificoMenuData(compo.id, menuData))
       ) {
         menu.classList.add("hidden");
       }
@@ -55,5 +56,11 @@ import OpcionMenu from "./opciones/OpcionMenu.astro";
       }
     });
   }
-  
+  function verificoMenuData(id, menuData) {
+    for (let i = 0; i < menuData.length; i++) {
+      if (menuData[i].url + "_btn" === id) {
+        return true;
+      }
+    }
+  }
 </script>
