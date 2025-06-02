@@ -25,7 +25,7 @@ export default {
 
 		},
 		screens: {
-			md: '950px', // Modificado a 800px
+			md: '950px'
 		},
 	},
 	plugins: [],
