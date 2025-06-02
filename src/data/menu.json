@@ -2,21 +2,21 @@
 {
         "texto": "Experiencia",
         "url": "#experiencia",
-        "width": "grande"
+        "width": "mediano"
     },
     {
         "texto": "Proyectos",
         "url": "#proyectos",
-        "width": "grande"
+        "width": "mediano"
     },
     {
         "texto": "Habilidades",
         "url": "#habilidades",
-        "width": "grande"
+        "width": "mediano"
     },    
     {
         "texto": "Repositorios",
         "url": "#repositorios",
-        "width": "grande"
+        "width": "mediano"
     }
 ]

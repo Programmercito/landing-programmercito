@@ -2,7 +2,6 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-
 		colors: {
 			transparent: 'transparent',
 			primary: {
@@ -24,6 +23,9 @@ export default {
 				300: '#374357'
 			},
 
+		},
+		screens: {
+			md: '950px', // Modificado a 800px
 		},
 	},
 	plugins: [],
