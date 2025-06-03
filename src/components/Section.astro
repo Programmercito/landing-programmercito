@@ -5,7 +5,9 @@ interface Props {
 }
 const {id } = Astro.props;
 ---
-<section id={id}
+<div class="mt-20 scroll-mt-20" id={id}></div>
+
+<section 
     class="flex flex-col md:flex-row items-center justify-between bg-white text-gray-800 px-8 py-2 max-w-6xl mx-auto"
 >
     <slot />
