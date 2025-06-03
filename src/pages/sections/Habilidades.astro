@@ -2,7 +2,7 @@
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import habilidades from "../../data/habilidades.json";
-import IconoLink from "../../components/opciones/IconoLink.astro";
+import IconoHabilidad from "../../components/opciones/IconoHabilidad.astro";
 import Adf from "../../components/icons/Adf.astro";
 import Angular from "../../components/icons/Angular.astro";
 import Cicd from "../../components/icons/Cicd.astro";
@@ -68,7 +68,7 @@ const iconComponents = {
                                 habilidad.icon as keyof typeof iconComponents
                             ];
                         return (
-                            <IconoLink text={habilidad.name} link="" title="">
+                            <IconoHabilidad text={habilidad.name} title="">
                                 <div class="relative flex flex-col items-center h-20 w-20 mt-2 mb-2 text-gray-300 group">
                                     {Icon && <Icon />}
                                     <span
@@ -79,7 +79,7 @@ const iconComponents = {
                                         {habilidad.name}
                                     </span>
                                 </div>
-                            </IconoLink>
+                            </IconoHabilidad>
                         );
                     })
                 }
