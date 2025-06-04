@@ -1,47 +1,106 @@
-# Astro Starter Kit: Minimal
+# 🚀 Programmercito: Landing & Portafolio
 
-```sh
-npm create astro@latest -- --template minimal
+Bienvenido a **Programmercito**, tu landing page y portafolio profesional hecho con [Astro](https://astro.build/) y [TailwindCSS](https://tailwindcss.com/). Este proyecto está diseñado para mostrar tus habilidades, experiencia y proyectos de una manera moderna, rápida y responsiva.
+
+![Screenshot](./public/images/logo.png)
+
+---
+
+## ✨ Características
+- Diseño responsive y minimalista
+- Secciones de perfil, experiencia, habilidades, proyectos y repositorios
+- Animaciones suaves y scroll inteligente
+- Componentes reutilizables en Astro
+- Fácil de personalizar y expandir
+- Despliegue listo para Netlify, Vercel, GitHub Pages, etc.
+
+---
+
+## 📦 Tecnologías principales
+- [Astro](https://astro.build/) (framework principal)
+- [TailwindCSS](https://tailwindcss.com/) (estilos)
+- [TypeScript](https://www.typescriptlang.org/) (tipado)
+- [Markdown](https://astro.build/core-concepts/markdown-content/) (contenido)
+
+---
+
+## 🛠️ Instalación y uso
+
+1. **Clona el repositorio:**
+   ```sh
+   git clone https://github.com/tuusuario/landing-programmercito.git
+   cd landing-programmercito
+   ```
+2. **Instala las dependencias:**
+   ```sh
+   npm install
+   ```
+3. **Corre el servidor de desarrollo:**
+   ```sh
+   npm run dev
+   ```
+   Abre [http://localhost:4321](http://localhost:4321) en tu navegador.
+
+4. **Construye para producción:**
+   ```sh
+   npm run build
+   ```
+   Los archivos finales estarán en la carpeta `/dist`.
+
+5. **Previsualiza la build:**
+   ```sh
+   npm run preview
+   ```
+
+---
+
+## 📁 Estructura del proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── public/           # Imágenes y assets estáticos
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/   # Componentes Astro y UI
+│   ├── data/         # Archivos JSON con datos
+│   ├── layouts/      # Layouts generales
+│   └── pages/        # Páginas y secciones
+├── package.json      # Dependencias y scripts
+└── astro.config.mjs  # Configuración de Astro
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧑‍💻 Personalización
+- Modifica los archivos en `src/data/` para cambiar tu información personal, habilidades, experiencia y proyectos.
+- Cambia imágenes en `public/images/`.
+- Edita los componentes en `src/components/` para personalizar el diseño.
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 🌐 Despliegue
+Puedes desplegar este sitio fácilmente en plataformas como [Vercel](https://vercel.com/), [Netlify](https://netlify.com/) o [GitHub Pages](https://pages.github.com/).
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📝 Requisitos
+- Node.js >= 18.x
+- npm >= 9.x
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📄 Licencia
+MIT © 2025 [Tu Nombre o Nick](https://github.com/tuusuario)
+
+---
+
+## 🤝 Contribuciones
+¡Pull requests y sugerencias son bienvenidas! Siéntete libre de abrir issues para mejoras o reportar bugs.
+
+---
+
+## 📬 Contacto
+¿Dudas o sugerencias? Escríbeme a [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com) o conecta en [LinkedIn](https://www.linkedin.com/in/tuusuario/).
+
+---
+
+> Hecho con ❤️ usando Astro y TailwindCSS.
