@@ -51,7 +51,7 @@ const repos = data.map((repo: GithubRepo) => ({
                       <Subtitle>{repo.name.toUpperCase()}</Subtitle>
                     </div>
                   </div>
-                  <p>{repo.description}</p>
+                  <p class="text-justify leading-relaxed">{repo.description}</p>
                   <div class="flex flex-wrap gap-2 mt-3 justify-center">
                     {repo.language && <Chip text={repo.language} />}
                     <Chip text={`⭐ ${repo.stargazers_count}`} />
