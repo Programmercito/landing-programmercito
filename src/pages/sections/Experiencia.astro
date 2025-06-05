@@ -5,6 +5,7 @@ import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/experiencia.json";
+import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
 ---
 
 <Section id="experiencia">
@@ -13,43 +14,9 @@ import links from "../../data/experiencia.json";
     <TitleSection>Experiencia</TitleSection>
 
     {
-      links.map((link, idx) => {
-        const content = (
-          <div class="group">s
-            <div class="p-3 bg-white rounded-lg shadow group-hover:shadow-2xl transition-all w-full">
-              <div class="flex flex-col md:flex-row md:items-start md:justify-between">
-                <div>
-                  <Subtitle>{link.name}</Subtitle>
-                  <TextResalt>{link.position}</TextResalt>
-                  <div class="text-sm text-gray-600">
-                    {link.startDate} -{" "}
-                    {link.endDate && link.endDate.trim() !== ""
-                      ? link.endDate
-                      : "Actualidad"}
-                  </div>
-                </div>
-                {link.location && (
-                  <span class="text-xs text-gray-500 flex items-center gap-1 self-center md:self-start mt-2 md:mt-0">
-                    <span>📍</span>
-                    <span>{link.location}</span>
-                  </span>
-                )}
-              </div>
-              <p class="mt-2 text-justify [text-justify:inter-word]">
-                {link.summary}
-              </p>
-              {link.highlights && link.highlights.length > 0 && (
-                <div class="flex flex-wrap gap-2 mt-3 justify-center">
-                  {link.highlights.map((highlight) => (
-                    <Chip text={highlight} />
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        );
-        return content;
-      })
+      links.map((link, idx) => (
+        <ExperienciaCard link={link} />
+      ))
     }
   </div>
 </Section>
