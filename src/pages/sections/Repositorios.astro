@@ -43,9 +43,43 @@ const repos = data.map((repo: GithubRepo) => ({
 
     <div class="grid gap-8 md:grid-cols-3 items-stretch">
       {repos.slice(0, 9).map((repo, idx) => <RepositorioCard repo={repo} />)}
-      <div class="hidden" id="repositorios-more">
+    </div>
+    <div class="flex justify-end mt-4">
+      <BordeadoIcon link="#repositorios-more" id="repositorios-more-btn">
+        Ver más repositorios
+      </BordeadoIcon>
+    </div>
+    <div class="hidden" id="repositorios-more">
+      <div class="grid gap-8 md:grid-cols-3 items-stretch">
         {repos.slice(9).map((repo, idx) => <RepositorioCard repo={repo} />)}
       </div>
     </div>
+    <div class="justify-end mt-4 hidden" id="repositorios-menos">
+      <BordeadoIcon link="#repositorios" id="repositorios-menos-btn">
+        Ocultar
+      </BordeadoIcon>
+    </div>
   </div>
 </Section>
+<script>
+  const btn = document.getElementById("repositorios-more-btn");
+  const more = document.getElementById("repositorios-more");
+  const btnMenos = document.getElementById("repositorios-menos-btn");
+  const menos = document.getElementById("repositorios-menos");
+  if (btn && more && menos) {
+    btn.addEventListener("click", () => {
+      more.classList.remove("hidden");
+      btn.classList.add("hidden");
+      menos.classList.remove("hidden");
+      menos.classList.add("flex");
+    });
+  }
+  if (btnMenos && menos && more) {
+    btnMenos.addEventListener("click", () => {
+      more.classList.add("hidden");
+      btn?.classList.remove("hidden");
+      menos.classList.add("hidden");
+      menos.classList.remove("flex");
+    });
+  }
+</script>
