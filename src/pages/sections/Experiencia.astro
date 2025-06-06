@@ -6,6 +6,8 @@ import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/experiencia.json";
 import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
+import OpcionMenu from "../../components/opciones/OpcionMenu.astro";
+import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 ---
 
 <Section id="experiencia">
@@ -14,9 +16,41 @@ import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
     <TitleSection>Experiencia</TitleSection>
 
     {links.slice(0, 4).map((link, idx) => <ExperienciaCard link={link} />)}
-
+    <div class="flex justify-end mt-4">
+      <BordeadoIcon link="#experiencia-more" id="experiencia-more-btn">
+        Ver más experiencias
+      </BordeadoIcon>
+    </div>
     <div class="hidden" id="experiencia-more">
       {links.slice(4).map((link, idx) => <ExperienciaCard link={link} />)}
     </div>
+    <div class=" justify-end mt-4 hidden" id="experiencia-menos">
+      <BordeadoIcon link="#experiencia" id="experiencia-menos-btn">
+        Ocultar
+      </BordeadoIcon>
+    </div>    
   </div>
 </Section>
+<script>
+
+      const btn = document.getElementById("experiencia-more-btn");
+      const more = document.getElementById("experiencia-more");
+      const btnMenos = document.getElementById("experiencia-menos-btn");
+      const menos = document.getElementById("experiencia-menos");
+      if (btn && more && menos) {
+        btn.addEventListener("click", () => {
+          more.classList.remove("hidden");
+          btn.classList.add("hidden");
+          menos.classList.remove("hidden");
+          menos.classList.add("flex");
+        });
+      }
+      if (btnMenos && menos && more) {
+        btnMenos.addEventListener("click", () => {
+          more.classList.add("hidden");
+          btn?.classList.remove("hidden");
+          menos.classList.add("hidden");
+          menos.classList.remove("flex");
+        });
+      }
+</script>

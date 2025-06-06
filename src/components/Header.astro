@@ -30,7 +30,6 @@ import menu from "../data/menu.json";
   // Ocultar el menú al hacer clic fuera de él
   document.addEventListener("click", (event) => {
     // creo un array hardoceado con "hola" y "hola2"
-    console.log("Click detected", event.target);
     if (menu && botonMenu) {
       const notisClickInsideMenu = !menu.contains(event.target);
       const notisClickInsideButton = !botonMenu.contains(event.target);
