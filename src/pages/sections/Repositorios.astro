@@ -6,6 +6,7 @@ import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import CodeIcon from "../../components/icons/CodeIcon.astro";
 import DeployIcon from "../../components/icons/DeployIcon.astro";
+import RepositorioCard from "../../components/opciones/RepositorioCard.astro";
 
 // Consumir la API de GitHub y guardar los datos principales en una lista
 type GithubRepo = {
@@ -41,41 +42,10 @@ const repos = data.map((repo: GithubRepo) => ({
     <TitleSection>Repositorios</TitleSection>
 
     <div class="grid gap-8 md:grid-cols-3 items-stretch">
-      {
-        repos.map((repo, idx) => {
-          const content = (
-            <div class="w-full h-full flex">
-              <div class="flex flex-col p-3 rounded-lg shadow-2xl w-full h-full transition-all duration-300 group hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] hover:scale-105">
-                <>
-                  <div>
-                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
-                      <div>
-                        <Subtitle>{repo.name.toUpperCase()}</Subtitle>
-                      </div>
-                    </div>
-                    <p class="text-justify [text-justify:inter-word]">
-                      {repo.description}
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-3 justify-center">
-                      {repo.language && <Chip text={repo.language} />}
-                      <Chip text={`⭐ ${repo.stargazers_count}`} />
-                      <Chip text={`🍴 ${repo.forks_count}`} />
-                    </div>
-                  </div>
-                </>
-                <div class="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-center mt-4">
-                  <BordeadoIcon link={repo.html_url}>
-                    <CodeIcon />
-                    Código
-                  </BordeadoIcon>
-                </div>
-              </div>
-            </div>
-          );
-          
-          return idx > 8 ? <div class="hidden">{content}</div> : content;
-        })
-      }
+      {repos.slice(0, 9).map((repo, idx) => <RepositorioCard repo={repo} />)}
+      <div class="hidden" id="repositorios-more">
+        {repos.slice(9).map((repo, idx) => <RepositorioCard repo={repo} />)}
+      </div>
     </div>
   </div>
 </Section>

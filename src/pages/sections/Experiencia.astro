@@ -13,10 +13,8 @@ import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
   <div class="order-2 md:order-1 text-center md:text-left">
     <TitleSection>Experiencia</TitleSection>
 
-    {
-      links.map((link, idx) => (
-        <ExperienciaCard link={link} />
-      ))
-    }
+    {links.slice(0, 4).map((link, idx) => <ExperienciaCard link={link} />)}
+      {links.slice(4).map((link, idx) => <ExperienciaCard link={link} />)}
+    </div>
   </div>
 </Section>
