@@ -14,6 +14,7 @@ import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
     <TitleSection>Experiencia</TitleSection>
 
     {links.slice(0, 4).map((link, idx) => <ExperienciaCard link={link} />)}
+
     <div class="hidden" id="experiencia-more">
       {links.slice(4).map((link, idx) => <ExperienciaCard link={link} />)}
     </div>
