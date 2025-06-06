@@ -1,13 +1,16 @@
 ---
 interface Props {
     link: string;
+    id?: string;
+    target?: string;
 }
-const { link } = Astro.props;
+const { link, id, target = "_blank" } = Astro.props;
 ---
 
 <a
     href={link}
-    target="_blank"
+    {...(id ? { id } : {})}
+    
     class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md justify-center
                shadow transition-all duration-300
                hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl"
