@@ -1,5 +1,25 @@
 [
     {
+        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
+        "url": "https://github.com/Programmercito/scraping-cines",
+        "name": "ScrapingCines",
+        "tech": [
+            "Playwright",
+            "Typescript"
+        ],
+        "despliegue": "https://t.me/cinesbo"
+    },
+    {
+        "description": "Aplicación web que centraliza los horarios de múltiples cines en Bolivia. Utiliza Playwright y TypeScript para realizar web scraping automatizado de los horarios de cartelera, los cuales se publican automáticamente en la aplicación. Desarrollada con Angular como frontend sin necesidad de backend, permite a los usuarios consultar fácilmente los horarios de películas de diferentes cadenas de cines desde una sola plataforma.",
+        "url": "https://github.com/Programmercito/horarios-cine",
+        "name": "HorariosCines",
+        "tech": [
+            "Typescript",
+            "Angular"
+        ],
+        "despliegue": "https://cine.devcito.org"
+    },
+    {
         "description": "Librería para seguridad de servicios web compartidos en diferentes tipos de usuarios. Permite proteger endpoints y recursos usando JWT y está diseñada para integrarse fácilmente en proyectos Java con Maven. Disponible en Sonatype Central.",
         "url": "https://github.com/Programmercito/datasealguard-java",
         "name": "DataSealGuard",
@@ -45,26 +65,6 @@
             "Sql lite"
         ],
         "despliegue": "https://t.me/amistadbo"
-    },
-    {
-        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
-        "url": "https://github.com/Programmercito/scraping-cines",
-        "name": "ScrapingCines",
-        "tech": [
-            "Playwright",
-            "Typescript"
-        ],
-        "despliegue": "https://t.me/cinesbo"
-    },
-    {
-        "description": "Aplicación web que centraliza los horarios de múltiples cines en Bolivia. Utiliza Playwright y TypeScript para realizar web scraping automatizado de los horarios de cartelera, los cuales se publican automáticamente en la aplicación. Desarrollada con Angular como frontend sin necesidad de backend, permite a los usuarios consultar fácilmente los horarios de películas de diferentes cadenas de cines desde una sola plataforma.",
-        "url": "https://github.com/Programmercito/horarios-cine",
-        "name": "HorariosCines",
-        "tech": [
-            "Typescript",
-            "Angular"
-        ],
-        "despliegue": "https://cine.devcito.org"
     },
     {
         "description": "Bot con IAs de Meta, proyecto de demostración para usar el API de OLLAMA. Desarrollado en Java y SpringBoot, integra ActiveMQ y la API de Telegram para interactuar con usuarios y demostrar capacidades de inteligencia artificial. Disponible en Telegram.",
