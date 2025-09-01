@@ -1,5 +1,4 @@
 ---
-
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import Chip from "../../components/opciones/Chip.astro";
 import Subtitle from "../../components/opciones/Subtitle.astro";
@@ -27,7 +26,24 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
                       <Subtitle>{link.name}</Subtitle>
                     </div>
                   </div>
-                  <p class="text-justify [text-justify:inter-word]">{link.description}</p>
+                  <p class="text-justify [text-justify:inter-word]">
+                    {link.description}
+                  </p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap justify-center items-start gap-2">
+                    {link.images?.map((img, index) => {
+                      return (
+                        <a href="#!" onclick={`abrirPopup('${img}')`}>
+                          <img
+                            src={img}
+                            alt={link.name}
+                            class="w-[70px] h-auto"
+                          />
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
                 <div>
                   {link.tech && link.tech.length > 0 && (
@@ -57,4 +73,26 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
       }
     </div>
   </div>
+  <dialog id="mimodal">
+    <p>Este es el contenido del popup</p>
+    <img
+      id="imagen-popup"
+      src=""
+      alt="Imagen dinámica"
+      style="max-width:100%;"
+    />
+    <button onclick="cerrarPopup()">Cerrar</button>
+  </dialog>
 </Section>
+<script>
+  function abrirPopup(src: string) {
+    // asigna la imagen al <img>
+    (document.getElementById("imagen-popup") as HTMLImageElement).src = src;
+    // abre el diálogo
+    (document.getElementById("mimodal") as HTMLDialogElement).showModal();
+  }
+
+  function cerrarPopup() {
+    (document.getElementById("mimodal") as HTMLDialogElement).close();
+  }
+</script>
