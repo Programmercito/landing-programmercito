@@ -3,7 +3,7 @@
     "name": "LITERMI",
     "position": "Desarrollador back-end",
     "startDate": "2024-04-30",
-    "endDate": "",
+    "endDate": "2025-08-06",
     "highlights": [
       "Java",
       "PHP",
@@ -14,7 +14,7 @@
       "TypeScript",
       "Css", "GIT"
     ],
-    "summary": "Desarrollé módulos de pago y microservicios en Java y PHP. Fui responsable de la creación y mejora de servicios web y microservicios para escalar y optimizar los procesos del negocio.",
+    "summary": "Desarrollador Full Stack en una startup de iGaming y apuestas (Trillonario, Lotto Kings, Buy Lotto Online). Mis responsabilidades incluyeron el diseño de un sistema de scoring de clientes, el desarrollo de un sistema de gestión de fraudes (FMS) y la integración de métodos de pago. También optimicé interfaces de pago, mejoré el procesamiento de órdenes y administré despliegues en producción. Desarrollé y optimicé cron jobs en Java para mejorar la automatización y eficiencia del sistema.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
     "location": "Montevideo, Uruguay"
   },

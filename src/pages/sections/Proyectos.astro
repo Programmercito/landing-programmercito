@@ -1,12 +1,8 @@
 ---
-import { Code } from "astro/components";
-import EmailIcon from "../../components/icons/EmailIcon.astro";
-import GithubIcon from "../../components/icons/GithubIcon.astro";
-import LinkedinIcon from "../../components/icons/LinkedinIcon.astro";
+
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import Chip from "../../components/opciones/Chip.astro";
 import Subtitle from "../../components/opciones/Subtitle.astro";
-import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/proyectos.json";
@@ -48,10 +44,12 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
                   <CodeIcon />
                   Código
                 </BordeadoIcon>
-                <BordeadoIcon link={link.despliegue}>
-                  <DeployIcon />
-                  Demo o despliegue
-                </BordeadoIcon>
+                {link.despliegue && (
+                  <BordeadoIcon link={link.despliegue}>
+                    <DeployIcon />
+                    Demo o despliegue
+                  </BordeadoIcon>
+                )}
               </div>
             </div>
           </div>

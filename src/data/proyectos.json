@@ -1,13 +1,20 @@
 [
     {
-        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
-        "url": "https://github.com/Programmercito/scraping-cines",
-        "name": "ScrapingCines",
+        "description": "API para la gestión integral de un café. Permite administrar y crear órdenes, las cuales transitan por una máquina de estados para controlar su ciclo de vida. El sistema calcula comisiones, muestra órdenes pendientes y pagadas, y genera reportes detallados por fecha y estado, facilitando el seguimiento y la administración del negocio.",
+        "url": "https://github.com/Programmercito/cafecitos",
+        "name": "ApiCafes",
         "tech": [
-            "Playwright",
-            "Typescript"
+            "RestFull",
+            "Laravel",
+            "Swagger",
+            "MariaDB"
         ],
-        "despliegue": "https://t.me/cinesbo"
+        "despliegue": "http://129.151.98.151:8000/api/documentation/",
+        "images": [
+            "/images/apicafes/uno.png",
+            "/images/apicafes/dos.png",
+            "/images/apicafes/tres.png"
+        ]
     },
     {
         "description": "Aplicación web que centraliza los horarios de múltiples cines en Bolivia. Utiliza Playwright y TypeScript para realizar web scraping automatizado de los horarios de cartelera, los cuales se publican automáticamente en la aplicación. Desarrollada con Angular como frontend sin necesidad de backend, permite a los usuarios consultar fácilmente los horarios de películas de diferentes cadenas de cines desde una sola plataforma.",
@@ -17,7 +24,29 @@
             "Typescript",
             "Angular"
         ],
-        "despliegue": "https://cine.devcito.org"
+        "despliegue": "https://cine.devcito.org",
+        "images": [
+            "/images/cine/uno.jpg",
+            "/images/cine/dos.jpg",
+            "/images/cine/tres.jpg",
+            "/images/cine/cuatro.jpg",
+            "/images/cine/cinco.jpg"
+        ]
+    },
+    {
+        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
+        "url": "https://github.com/Programmercito/scraping-cines",
+        "name": "ScrapingCines",
+        "tech": [
+            "Playwright",
+            "Typescript"
+        ],
+        "despliegue": "https://t.me/cinesbo",
+        "images": [
+            "/images/scrapingcine/uno.png",
+            "/images/scrapingcine/dos.png",
+            "/images/scrapingcine/tres.png"
+        ]
     },
     {
         "description": "Librería para seguridad de servicios web compartidos en diferentes tipos de usuarios. Permite proteger endpoints y recursos usando JWT y está diseñada para integrarse fácilmente en proyectos Java con Maven. Disponible en Sonatype Central.",
@@ -65,18 +94,5 @@
             "Sql lite"
         ],
         "despliegue": "https://t.me/amistadbo"
-    },
-    {
-        "description": "Bot con IAs de Meta, proyecto de demostración para usar el API de OLLAMA. Desarrollado en Java y SpringBoot, integra ActiveMQ y la API de Telegram para interactuar con usuarios y demostrar capacidades de inteligencia artificial. Disponible en Telegram.",
-        "url": "https://github.com/Programmercito/bot-microia",
-        "name": "BotMicroia",
-        "tech": [
-            "Java",
-            "Ollama",
-            "SpringBoot",
-            "ActiveMQ",
-            "Telegram Api"
-        ],
-        "despliegue": "https://t.me/Llamitabot"
     }
 ]
