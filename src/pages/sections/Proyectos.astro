@@ -74,25 +74,23 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
     </div>
   </div>
   <dialog id="mimodal">
-    <p>Este es el contenido del popup</p>
     <img
       id="imagen-popup"
       src=""
-      alt="Imagen dinámica"
-      style="max-width:100%;"
+      class="h-[600px] w-auto"
     />
     <button onclick="cerrarPopup()">Cerrar</button>
   </dialog>
 </Section>
-<script>
-  function abrirPopup(src: string) {
+<script is:inline>
+  function abrirPopup(src) {
     // asigna la imagen al <img>
-    (document.getElementById("imagen-popup") as HTMLImageElement).src = src;
+    document.getElementById("imagen-popup").src = src;
     // abre el diálogo
-    (document.getElementById("mimodal") as HTMLDialogElement).showModal();
+    document.getElementById("mimodal").showModal();
   }
 
   function cerrarPopup() {
-    (document.getElementById("mimodal") as HTMLDialogElement).close();
+    document.getElementById("mimodal").close();
   }
 </script>
