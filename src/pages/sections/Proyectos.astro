@@ -18,18 +18,20 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
       {
         links.map((link, idx) => (
           <div class="w-full h-full flex">
+            {/* CARD */}
             <div class="flex flex-col p-3 rounded-lg shadow-2xl w-full h-full transition-all duration-300 group hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] hover:scale-105">
               <>
-                <div>
-                  <div class="flex flex-col md:flex-row md:items-start md:justify-between">
-                    <div>
-                      <Subtitle>{link.name}</Subtitle>
-                    </div>
-                  </div>
-                  <p class="text-justify [text-justify:inter-word]">
-                    {link.description}
-                  </p>
+                {/* HEADER — TÍTULO CENTRADO */}
+                <div class="flex justify-center mb-1">
+                  <Subtitle class="text-center">{link.name}</Subtitle>
                 </div>
+
+                {/* DESCRIPCIÓN — TEXTO A LA IZQUIERDA */}
+                <p class="text-left leading-relaxed tracking-wide mb-2">
+                  {link.description}
+                </p>
+
+                {/* IMÁGENES — NO TOCADO */}
                 <div>
                   <div class="flex flex-wrap justify-center items-start gap-2">
                     {link.images?.map((img, index) => {
@@ -45,6 +47,8 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
                     })}
                   </div>
                 </div>
+
+                {/* TECH CHIPS — IGUAL */}
                 <div>
                   {link.tech && link.tech.length > 0 && (
                     <div class="flex flex-wrap gap-2 mt-3 justify-center">
@@ -55,6 +59,11 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
                   )}
                 </div>
               </>
+
+              {/* SPACER — EMPUJA BOTONES AL FONDO */}
+              <div class="mt-auto" />
+
+              {/* FOOTER — BOTONES ALINEADOS ABAJO */}
               <div class="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-center mt-4">
                 <BordeadoIcon link={link.url} target="_self">
                   <CodeIcon />
@@ -73,16 +82,34 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
       }
     </div>
   </div>
-  <dialog id="mimodal" class="bg-bg-200 border border-primary-200 rounded-lg shadow-2xl backdrop:bg-black/50 p-4 max-w-3xl">
+
+  {/* DIALOG — INTACTO */}
+  <dialog
+    id="mimodal"
+    class="bg-bg-200 border border-primary-200 rounded-lg shadow-2xl backdrop:bg-black/50 p-4 max-w-3xl"
+  >
     <img
       id="imagen-popup"
       src=""
       alt="Imagen del proyecto"
       class="w-full h-auto object-contain max-h-[70vh] rounded"
     />
-    <button onclick="cerrarPopup()" class="absolute top-2 right-2 p-1 bg-bg-300 rounded-full text-text-100 hover:bg-primary-100 hover:scale-110 transition-all">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    <button
+      onclick="cerrarPopup()"
+      class="absolute top-2 right-2 p-1 bg-bg-300 rounded-full text-text-100 hover:bg-primary-100 hover:scale-110 transition-all"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
   </dialog>

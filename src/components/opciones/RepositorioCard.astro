@@ -6,27 +6,41 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import CodeIcon from "../../components/icons/CodeIcon.astro";
 ---
 <div class="w-full h-full flex">
-  <div class="flex flex-col p-3 rounded-lg shadow-2xl w-full h-full transition-all duration-300 group hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] hover:scale-105">
-    <div>
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between">
-        <div>
-          <Subtitle>{repo.name.toUpperCase()}</Subtitle>
-        </div>
-      </div>
-      <p class="text-justify [text-justify:inter-word]">
-        {repo.description}
-      </p>
-      <div class="flex flex-wrap gap-2 mt-3 justify-center">
+  <div
+    class="flex flex-col p-3 rounded-lg shadow-2xl w-full h-full transition-all duration-300 group hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] hover:scale-105"
+  >
+    {/* HEADER — título centrado */}
+    <div class="flex justify-center mb-2">
+      <Subtitle class="text-center">
+        {repo.name.toUpperCase()}
+      </Subtitle>
+    </div>
+
+    {/* DESCRIPCIÓN — texto a la izquierda */}
+    <p class="text-left leading-relaxed tracking-wide mb-2">
+      {repo.description}
+    </p>
+
+    {/* SPACER — empuja chips+botones hacia abajo */}
+    <div class="mt-auto"></div>
+
+    {/* CHIPS + FOOTER */}
+    <div class="flex flex-col items-center gap-3">
+      {/* CHIPS — ahora pegados al footer */}
+      <div class="flex flex-wrap justify-center gap-2">
         {repo.language && <Chip text={repo.language} />}
         <Chip text={`⭐ ${repo.stargazers_count}`} />
         <Chip text={`🍴 ${repo.forks_count}`} />
       </div>
-    </div>
-    <div class="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-center mt-4">
-      <BordeadoIcon link={repo.html_url}>
-        <CodeIcon />
-        Código
-      </BordeadoIcon>
+
+      {/* FOOTER — botones abajo */}
+      <div class="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-center">
+        <BordeadoIcon link={repo.html_url}>
+          <CodeIcon />
+          Código
+        </BordeadoIcon>
+      </div>
     </div>
   </div>
 </div>
+

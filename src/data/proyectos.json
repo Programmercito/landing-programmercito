@@ -1,10 +1,33 @@
 [
     {
-        "description": "API para la gestión integral de un café. Permite administrar y crear órdenes, las cuales transitan por una máquina de estados para controlar su ciclo de vida. El sistema calcula comisiones, muestra órdenes pendientes y pagadas, y genera reportes detallados por fecha y estado, facilitando el seguimiento y la administración del negocio.",
+        "description": "Una interfaz web intuitiva para la administración de pedidos en cafeterías y restaurantes. Simplifica el cálculo de comisiones y ganancias, y optimiza la gestión de tu negocio con una herramienta visual y fácil de usar.",
+        "url": "https: //github.com/Programmercito/cafecitos-ng",
+        "name": "Web admin Cafes",
+        "tech": [
+            "Angular",
+            "Typescript",
+            "Primeng",
+            "Css",
+            "HTML"
+        ],
+        "despliegue": "http://129.151.98.151:8000",
+        "images": [
+            "/images/webcafes/uno.png",
+            "/images/webcafes/dos.png",
+            "/images/webcafes/tres.png",
+            "/images/webcafes/cuatro.png",
+            "/images/webcafes/once.png",
+            "/images/webcafes/doce.png",
+            "/images/webcafes/trece.png",
+            "/images/webcafes/catorce.png"
+        ]
+    },
+    {
+        "description": "Potencia la gestión de tu cafetería con esta API integral. Desde la creación y seguimiento de órdenes mediante una máquina de estados que controla su ciclo de vida, hasta el cálculo de comisiones y la generación de reportes detallados. Una solución completa para optimizar la administración de tu negocio.",
         "url": "https://github.com/Programmercito/cafecitos",
         "name": "ApiCafes",
         "tech": [
-            "RestFull",
+            "RestFul",
             "Laravel",
             "Swagger",
             "MariaDB"
@@ -17,7 +40,7 @@
         ]
     },
     {
-        "description": "Aplicación web que centraliza los horarios de múltiples cines en Bolivia. Utiliza Playwright y TypeScript para realizar web scraping automatizado de los horarios de cartelera, los cuales se publican automáticamente en la aplicación. Desarrollada con Angular como frontend sin necesidad de backend, permite a los usuarios consultar fácilmente los horarios de películas de diferentes cadenas de cines desde una sola plataforma.",
+        "description": "La solución definitiva para los amantes del cine en Bolivia. Esta aplicación web centraliza los horarios de múltiples cines, utilizando web scraping automatizado para mantener la cartelera actualizada en tiempo real. Consulta los horarios de todas las cadenas de cines desde una única plataforma, sin necesidad de un backend.",
         "url": "https://github.com/Programmercito/horarios-cine",
         "name": "HorariosCines",
         "tech": [
@@ -34,7 +57,7 @@
         ]
     },
     {
-        "description": "Bot de Telegram que lee los horarios de cines para verlos en un canal de Telegram. Utiliza Playwright y TypeScript para hacer scraping de los horarios y publicarlos automáticamente en el canal.",
+        "description": "Mantente al día de los últimos estrenos con este bot de Telegram. Utilizando técnicas de web scraping, extrae y publica automáticamente los horarios de los cines en un canal de Telegram, para que no te pierdas ninguna película.",
         "url": "https://github.com/Programmercito/scraping-cines",
         "name": "ScrapingCines",
         "tech": [
@@ -49,7 +72,7 @@
         ]
     },
     {
-        "description": "Librería para seguridad de servicios web compartidos en diferentes tipos de usuarios. Permite proteger endpoints y recursos usando JWT y está diseñada para integrarse fácilmente en proyectos Java con Maven. Disponible en Sonatype Central.",
+        "description": "Fortalece la seguridad de tus servicios web con esta librería Java. Protege tus endpoints y recursos con JWT, y se integra fácilmente en tus proyectos Maven. Una solución robusta y confiable para la seguridad de tus aplicaciones, disponible en Sonatype Central.",
         "url": "https://github.com/Programmercito/datasealguard-java",
         "name": "DataSealGuard",
         "tech": [
@@ -60,7 +83,7 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/DataSealGuard"
     },
     {
-        "description": "Librería Java para generar enlaces con parámetros firmados mediante JWT usando criptografía asimétrica. Permite que un backend independiente firme el contenido de un parámetro, el cual se envía como parte de un link. En la web, sin necesidad de backend, el frontend valida el JWT con la clave pública y, solo si la firma es válida, muestra el contenido. Así, se garantiza la integridad y autenticidad de los datos en páginas estáticas, evitando manipulaciones y eliminando la necesidad de un backend para la verificación.",
+        "description": "Garantiza la integridad y autenticidad de tus enlaces con esta librería Java. Genera enlaces con parámetros firmados mediante JWT y criptografía asimétrica, permitiendo una validación segura en el frontend sin necesidad de un backend. Ideal para proteger páginas estáticas y evitar la manipulación de datos.",
         "url": "https://github.com/Programmercito/JwtLinkDinamic",
         "name": "JwtLinkDinamic",
         "tech": [
@@ -72,7 +95,7 @@
         "despliegue": "https://central.sonatype.com/artifact/io.github.programmercito/JwtLinkDinamic"
     },
     {
-        "description": "Librería para usar Google Adsense en Angular16+. Permite integrar anuncios de Google Adsense de forma sencilla y eficiente en aplicaciones desarrolladas con Angular, utilizando TypeScript. Publicada en NPM.",
+        "description": "Monetiza tus aplicaciones Angular de forma sencilla y eficiente. Esta librería facilita la integración de anuncios de Google Adsense en tus proyectos, permitiéndote generar ingresos con un mínimo esfuerzo. Publicada en NPM para una fácil implementación.",
         "url": "https://github.com/Programmercito/osbo-adsense-angular",
         "name": "OsboAdsenseAngular",
         "tech": [
@@ -83,7 +106,7 @@
         "despliegue": "https://www.npmjs.com/package/osbo-adsense-angular"
     },
     {
-        "description": "Bot para Telegram que permite hacer chats entre usuarios. Desarrollado con Java, SpringBoot y ActiveMQ, utiliza la API de Telegram y una base de datos Sql lite para gestionar las conversaciones. El bot está disponible en Telegram.",
+        "description": "Conecta con otros usuarios a través de este bot de chat para Telegram. Desarrollado con Java, SpringBoot y ActiveMQ, ofrece una plataforma de chat robusta y escalable. Una solución completa para crear comunidades y facilitar la interacción entre usuarios.",
         "url": "https://github.com/Programmercito/date-bots",
         "name": "DateBots",
         "tech": [
