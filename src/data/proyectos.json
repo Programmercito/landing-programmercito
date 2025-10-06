@@ -40,6 +40,17 @@
         ]
     },
     {
+        "description": "Una colección de herramientas para desarrolladores, diseñadas con un enfoque en la privacidad. Todas las utilidades se ejecutan de forma local, garantizando que tus datos nunca abandonen tu equipo.",
+        "url": "https://github.com/Programmercito/devcitoUtils",
+        "name": "Devcito Tools",
+        "tech": [
+            "Astro",
+            "Tailwind",
+            "Javascript"
+        ],
+        "despliegue": "https://tools.devcito.org" 
+    },
+    {
         "description": "La solución definitiva para los amantes del cine en Bolivia. Esta aplicación web centraliza los horarios de múltiples cines, utilizando web scraping automatizado para mantener la cartelera actualizada en tiempo real. Consulta los horarios de todas las cadenas de cines desde una única plataforma, sin necesidad de un backend.",
         "url": "https://github.com/Programmercito/horarios-cine",
         "name": "HorariosCines",
