@@ -40,7 +40,7 @@
         ]
     },
     {
-        "description": "Una colección de herramientas para desarrolladores, diseñadas con un enfoque en la privacidad. Todas las utilidades se ejecutan de forma local, garantizando que tus datos nunca abandonen tu equipo.",
+        "description": "Devcito Utils es una colección de herramientas para desarrolladores que se ejecutan 100% en tu navegador. Sin rastreadores, sin servidores: tus datos nunca salen de tu equipo. Incluye utilidades como formateador JSON, decodificador JWT, conversor de timestamps, verificador HMAC, generador de hashes y más. Cada herramienta está diseñada para ser rápida, ligera y útil en tareas cotidianas de desarrollo, sin comprometer tu privacidad ni depender de servicios externos. Ideal para quienes buscan eficiencia sin sacrificar control sobre sus datos",
         "url": "https://github.com/Programmercito/devcitoUtils",
         "name": "Devcito Tools",
         "tech": [
@@ -48,7 +48,13 @@
             "Tailwind",
             "Javascript"
         ],
-        "despliegue": "https://tools.devcito.org" 
+        "despliegue": "https://tools.devcito.org",
+        "images": [
+            "/images/tools/uno.png",
+            "/images/tools/dos.png",
+            "/images/tools/tres.png",
+            "/images/tools/cuatro.png"
+        ]
     },
     {
         "description": "La solución definitiva para los amantes del cine en Bolivia. Esta aplicación web centraliza los horarios de múltiples cines, utilizando web scraping automatizado para mantener la cartelera actualizada en tiempo real. Consulta los horarios de todas las cadenas de cines desde una única plataforma, sin necesidad de un backend.",
