@@ -1,7 +1,6 @@
 ---
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import Chip from "../../components/opciones/Chip.astro";
-import Subtitle from "../../components/opciones/Subtitle.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/proyectos.json";
@@ -425,10 +424,9 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   // Variables globales para el modal
   let imagenesActuales = [];
   let imagenActualIndex = 0;
-  let proyectoActualIdx = 0;
 
   // Función para cambiar la imagen principal desde los thumbnails
-  function cambiarImagen(src, projectIdx, btnElement) {
+  window.cambiarImagen = function(src, projectIdx, btnElement) {
     const mainImg = document.getElementById(`main-img-${projectIdx}`);
     if (mainImg) {
       // Fade out
@@ -453,9 +451,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   }
 
   // Abrir popup con navegación
-  function abrirPopup(src, projectIdx) {
-    console.log('Abriendo popup con src:', src, 'projectIdx:', projectIdx);
-    proyectoActualIdx = projectIdx;
+  window.abrirPopup = function(src, projectIdx) {
     
     // Obtener el contenedor de la galería específico por el id de la imagen principal
     const mainImg = document.getElementById(`main-img-${projectIdx}`);
@@ -558,14 +554,14 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   }
 
   // Navegación del modal
-  function imagenAnterior() {
+  window.imagenAnterior = function() {
     if (imagenActualIndex > 0) {
       imagenActualIndex--;
       actualizarModal();
     }
   }
 
-  function imagenSiguiente() {
+  window.imagenSiguiente = function() {
     if (imagenActualIndex < imagenesActuales.length - 1) {
       imagenActualIndex++;
       actualizarModal();
@@ -573,7 +569,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   }
 
   // Cerrar popup
-  function cerrarPopup() {
+  window.cerrarPopup = function() {
     const modal = document.getElementById("mimodal");
     if (modal) {
       modal.close();
@@ -589,7 +585,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
     if (modal) {
       modal.addEventListener("click", (e) => {
         if (e.target === e.currentTarget) {
-          cerrarPopup();
+          window.cerrarPopup();
         }
       });
     }
@@ -600,11 +596,11 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
       if (!modal || !modal.open) return;
 
       if (e.key === "Escape") {
-        cerrarPopup();
+        window.cerrarPopup();
       } else if (e.key === "ArrowLeft") {
-        imagenAnterior();
+        window.imagenAnterior();
       } else if (e.key === "ArrowRight") {
-        imagenSiguiente();
+        window.imagenSiguiente();
       }
     });
 

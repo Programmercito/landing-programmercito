@@ -2,8 +2,6 @@
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
-import CodeIcon from "../../components/icons/CodeIcon.astro";
-import RepositorioCard from "../../components/opciones/RepositorioCard.astro";
 
 // Consumir la API de GitHub y guardar los datos principales en una lista
 type GithubRepo = {
@@ -147,7 +145,7 @@ try {
     
     <div class="hidden" id="repositorios-more">
       <div class="grid gap-6 grid-cols-1 md:grid-cols-3 items-stretch mt-6">
-        {repos.slice(9).map((repo, idx) => (
+        {repos.slice(9).map((repo) => (
           <div class="reveal">
             <a 
               href={repo.html_url}
