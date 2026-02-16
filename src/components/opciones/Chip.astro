@@ -3,30 +3,39 @@ interface Props {
     text: string;
 }
 const { text } = Astro.props;
-const className = `
-  items-center justify-center
-  tracking-wide 
-  py-2 px-4
-  rounded-xl
-  bg-gradient-to-r from-blue-600 to-indigo-600
-  transition-all duration-700 ease-in-out
-  hover:scale-110 hover:shadow-[0_0_12px_var(--tw-shadow-color)] hover:shadow-primary-200
-  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200 bg-bg-300 text-sm
-`;
 ---
 
-<div class={className}>
-    <span>{text}</span>
+<div class="chip-tag inline-flex items-center px-3 py-1.5 rounded-lg
+            bg-primary-100/40 border border-primary-200/20 backdrop-blur-sm
+            text-xs font-medium text-accent-200/90 tracking-wide
+            transition-all duration-300
+            hover:border-accent-200/40 hover:bg-primary-100/60 hover:text-accent-200
+            hover:shadow-[0_0_15px_rgba(206,232,255,0.1)] hover:scale-105
+            cursor-default select-none">
+    <span class="relative z-10">{text}</span>
 </div>
 
 <style>
-    .grande-width {
-        width: 140px;
-    }
-    .mediano-width {
-        width: 110px;
-    }
-    .pequeno-width {
-        width: 80px;
-    }
+  .chip-tag {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chip-tag::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(172, 194, 239, 0.08) 0%,
+      transparent 50%,
+      rgba(206, 232, 255, 0.05) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .chip-tag:hover::before {
+    opacity: 1;
+  }
 </style>

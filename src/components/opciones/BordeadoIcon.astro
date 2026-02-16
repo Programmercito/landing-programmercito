@@ -10,10 +10,40 @@ const { link, id, target = "_blank" } = Astro.props;
 <a
     href={link}
     {...(id ? { id } : {})}
-    
-    class="inline-flex items-center gap-x-1 px-4 py-2 border border-gray-300 rounded-md justify-center
-               shadow transition-all duration-300
-               hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-2xl"
+    target={target}
+    class="bordeado-btn group inline-flex items-center gap-x-2 px-5 py-2.5 rounded-xl justify-center
+               text-sm font-medium text-text-200
+               border border-primary-200/30 bg-bg-200/50 backdrop-blur-sm
+               transition-all duration-400
+               hover:border-primary-300/50 hover:bg-primary-100/40 hover:text-text-100
+               hover:scale-105 hover:shadow-[0_0_25px_rgba(61,90,128,0.35)]"
 >
     <slot />
 </a>
+
+<style>
+    .bordeado-btn {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bordeado-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(172, 194, 239, 0.08),
+            transparent
+        );
+        transition: left 0.5s;
+    }
+
+    .bordeado-btn:hover::before {
+        left: 100%;
+    }
+</style>

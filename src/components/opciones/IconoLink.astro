@@ -11,7 +11,38 @@ const { link, title, text } = Astro.props;
     href={link}
     title={title}
     target="_blank"
-    class="bg-bg-200 shadow-2xl shadow-black/60 mr-1 hover:bg-bg-100 text-white font-bold py-2 px-2 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.75)]"
+    class="icono-link group inline-flex items-center justify-center
+               p-2.5 rounded-xl
+               bg-bg-200/60 border border-primary-200/20 backdrop-blur-sm
+               text-text-200 
+               transition-all duration-400
+               hover:bg-primary-100/40 hover:border-primary-300/40 hover:text-accent-200
+               hover:scale-110 hover:shadow-[0_0_20px_rgba(61,90,128,0.3)]"
 >
     <slot />
 </a>
+
+<style>
+    .icono-link {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .icono-link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity 0.3s;
+        background: radial-gradient(
+            60px circle at 50% 50%,
+            rgba(172, 194, 239, 0.1),
+            transparent 70%
+        );
+    }
+
+    .icono-link:hover::after {
+        opacity: 1;
+    }
+</style>

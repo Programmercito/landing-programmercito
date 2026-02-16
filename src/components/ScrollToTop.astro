@@ -5,15 +5,22 @@
 <button
     id="scrollToTopBtn"
     aria-label="Volver arriba"
-    class="fixed bottom-6 right-6 z-50 bg-primary-100 text-white p-3 rounded-full shadow-2xl hover:bg-primary-200 transition-all duration-300 flex items-center justify-center group"
+    class="scroll-top-btn fixed bottom-6 right-6 z-50 p-3 rounded-full
+               bg-bg-200/80 border border-primary-200/30 backdrop-blur-sm
+               text-text-200
+               shadow-[0_0_20px_rgba(15,28,46,0.5)]
+               transition-all duration-400
+               hover:bg-primary-100/60 hover:border-primary-300/50 hover:text-accent-200
+               hover:scale-110 hover:shadow-[0_0_30px_rgba(61,90,128,0.4)]
+               flex items-center justify-center group"
     onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
-    style="display: none;"
+    style="display: none; opacity: 0;"
 >
     <svg
-        class="w-7 h-7 group-hover:scale-125 transition-transform duration-200"
+        class="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
+        stroke-width="2.5"
         viewBox="0 0 24 24"
     >
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"
@@ -21,16 +28,48 @@
     </svg>
 </button>
 
+<style>
+    .scroll-top-btn {
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .scroll-top-btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity 0.3s;
+        background: radial-gradient(
+            40px circle at 50% 50%,
+            rgba(172, 194, 239, 0.12),
+            transparent 70%
+        );
+    }
+
+    .scroll-top-btn:hover::before {
+        opacity: 1;
+    }
+</style>
+
 <script>
-    // Mostrar el botón solo cuando se hace scroll hacia abajo
     if (typeof window !== "undefined") {
         window.addEventListener("scroll", () => {
             const btn = document.getElementById("scrollToTopBtn");
             if (!btn) return; 
             if (window.scrollY > 200) {
                 btn.style.display = "flex";
+                requestAnimationFrame(() => {
+                    btn.style.opacity = "1";
+                });
             } else {
-                btn.style.display = "none";
+                btn.style.opacity = "0";
+                setTimeout(() => {
+                    if (window.scrollY <= 200) {
+                        btn.style.display = "none";
+                    }
+                }, 400);
             }
         });
     }

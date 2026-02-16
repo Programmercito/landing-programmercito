@@ -1,0 +1,280 @@
+---
+// Componente de fondo animado con partículas y efectos ULTRA COOL
+---
+
+<div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+  {/* Gradiente base animado */}
+  <div class="absolute inset-0 bg-gradient-to-br from-bg-100 via-bg-200 to-bg-100" />
+  
+  {/* Círculos de gradiente animados con movimiento orgánico */}
+  <div class="gradient-orb absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary-100/20 rounded-full blur-[120px]" />
+  <div class="gradient-orb absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent-100/15 rounded-full blur-[100px]" style="animation-delay: -5s" />
+  <div class="gradient-orb absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-primary-200/10 rounded-full blur-[80px]" style="animation-delay: -10s" />
+  <div class="gradient-orb absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-accent-200/10 rounded-full blur-[60px]" style="animation-delay: -15s" />
+  
+  {/* Grid sutil animado */}
+  <div class="grid-bg absolute inset-0 opacity-[0.03]" />
+  
+  {/* Líneas de conexión animadas */}
+  <svg class="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(172, 194, 239, 0.5)" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+  
+  {/* Partículas ULTRA COOL */}
+  <canvas id="particles-canvas" class="absolute inset-0 w-full h-full" />
+  
+  {/* Efecto de vignette */}
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,28,46,0.4)_100%)]" />
+</div>
+
+<style>
+  /* Animación de órbita mejorada para los gradientes */
+  @keyframes orbFloat {
+    0%, 100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    25% {
+      transform: translate(50px, -30px) scale(1.1) rotate(5deg);
+    }
+    50% {
+      transform: translate(0, 50px) scale(0.95) rotate(0deg);
+    }
+    75% {
+      transform: translate(-40px, 20px) scale(1.05) rotate(-5deg);
+    }
+  }
+
+  .gradient-orb {
+    animation: orbFloat 20s ease-in-out infinite;
+  }
+  
+  /* Grid animado */
+  @keyframes gridMove {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(60px);
+    }
+  }
+  
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(172, 194, 239, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(172, 194, 239, 0.5) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+  }
+</style>
+
+<script is:inline>
+  // Sistema de partículas ULTRA COOL
+  (function() {
+    const canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationId = null;
+    let isActive = true;
+    let mouseX = 0;
+    let mouseY = 0;
+    let isMouseMoving = false;
+    let mouseTimeout = null;
+    
+    // Configuración ULTRA COOL
+    const config = {
+      particleCount: window.matchMedia('(pointer: coarse)').matches ? 20 : 40,
+      connectionDistance: 180,
+      maxConnections: 4,
+      speed: 0.4,
+      mouseRepelDistance: 150,
+      mouseRepelForce: 2,
+      colors: ['rgba(172, 194, 239, 0.6)', 'rgba(206, 232, 255, 0.5)', 'rgba(77, 100, 141, 0.5)', 'rgba(61, 90, 128, 0.4)'],
+      sizes: [1.5, 2, 2.5, 1]
+    };
+    
+    // Resize canvas
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    
+    // Clase Partícula ULTRA COOL
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * config.speed;
+        this.vy = (Math.random() - 0.5) * config.speed;
+        this.radius = config.sizes[Math.floor(Math.random() * config.sizes.length)];
+        this.color = config.colors[Math.floor(Math.random() * config.colors.length)];
+        this.alpha = Math.random() * 0.5 + 0.3;
+        this.pulsePhase = Math.random() * Math.PI * 2;
+        this.pulseSpeed = 0.02 + Math.random() * 0.02;
+      }
+      
+      update() {
+        // Movimiento base
+        this.x += this.vx;
+        this.y += this.vy;
+        
+        // Rebote en bordes suave
+        if (this.x < 0) this.vx += 0.01;
+        if (this.x > canvas.width) this.vx -= 0.01;
+        if (this.y < 0) this.vy += 0.01;
+        if (this.y > canvas.height) this.vy -= 0.01;
+        
+        // Interacción con mouse
+        if (isMouseMoving) {
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < config.mouseRepelDistance) {
+            const force = (config.mouseRepelDistance - distance) / config.mouseRepelDistance;
+            this.vx += (dx / distance) * force * config.mouseRepelForce * 0.1;
+            this.vy += (dy / distance) * force * config.mouseRepelForce * 0.1;
+          }
+        }
+        
+        // Pulso de opacidad
+        this.pulsePhase += this.pulseSpeed;
+        this.currentAlpha = this.alpha + Math.sin(this.pulsePhase) * 0.2;
+        
+        // Fricción suave
+        this.vx *= 0.99;
+        this.vy *= 0.99;
+        
+        // Mantener velocidad mínima
+        const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+        if (speed < 0.1) {
+          this.vx += (Math.random() - 0.5) * 0.05;
+          this.vy += (Math.random() - 0.5) * 0.05;
+        }
+      }
+      
+      draw() {
+        // Glow effect
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
+        ctx.fillStyle = this.color.replace(/[\d.]+\)$/, `${this.currentAlpha * 0.2})`);
+        ctx.fill();
+        
+        // Partícula principal
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color.replace(/[\d.]+\)$/, `${this.currentAlpha})`);
+        ctx.fill();
+      }
+    }
+    
+    // Inicializar partículas
+    function init() {
+      particles = [];
+      for (let i = 0; i < config.particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    
+    // Dibujar conexiones con gradiente
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        let connections = 0;
+        
+        for (let j = i + 1; j < particles.length; j++) {
+          if (connections >= config.maxConnections) break;
+          
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < config.connectionDistance) {
+            const opacity = (1 - distance / config.connectionDistance) * 0.3;
+            
+            // Gradient line
+            const gradient = ctx.createLinearGradient(
+              particles[i].x, particles[i].y,
+              particles[j].x, particles[j].y
+            );
+            gradient.addColorStop(0, `rgba(172, 194, 239, ${opacity})`);
+            gradient.addColorStop(0.5, `rgba(206, 232, 255, ${opacity * 1.5})`);
+            gradient.addColorStop(1, `rgba(172, 194, 239, ${opacity})`);
+            
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+            connections++;
+          }
+        }
+      }
+    }
+    
+    // Loop de animación optimizado
+    let lastTime = 0;
+    function animate(currentTime) {
+      if (!isActive) return;
+      
+      // Limitar a 30 FPS para mejor rendimiento
+      if (currentTime - lastTime < 33) {
+        animationId = requestAnimationFrame(animate);
+        return;
+      }
+      lastTime = currentTime;
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      
+      drawConnections();
+      
+      animationId = requestAnimationFrame(animate);
+    }
+    
+    // Mouse tracking
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      isMouseMoving = true;
+      
+      clearTimeout(mouseTimeout);
+      mouseTimeout = setTimeout(() => {
+        isMouseMoving = false;
+      }, 100);
+    });
+    
+    // Visibility API
+    document.addEventListener('visibilitychange', () => {
+      isActive = !document.hidden;
+      if (isActive && !animationId) {
+        animate(0);
+      }
+    });
+    
+    // Inicializar
+    resize();
+    init();
+    animate(0);
+    
+    // Event listeners
+    window.addEventListener('resize', () => {
+      resize();
+      init();
+    });
+  })();
+</script>

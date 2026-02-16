@@ -1,29 +1,109 @@
 ---
 import Chip from "../../components/opciones/Chip.astro";
-import Subtitle from "../../components/opciones/Subtitle.astro";
-import TextResalt from "../../components/opciones/TextResalt.astro";
 import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/experiencia.json";
-import ExperienciaCard from "../../components/opciones/ExperienciaCard.astro";
-import OpcionMenu from "../../components/opciones/OpcionMenu.astro";
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
 ---
 
 <Section id="experiencia">
-  <!-- Texto y botones -->
   <div class="order-2 md:order-1 text-center md:text-left">
-    <TitleSection>Experiencia</TitleSection>
+    <div class="reveal">
+      <TitleSection>Experiencia</TitleSection>
+    </div>
 
-    {links.slice(0, 4).map((link, idx) => <ExperienciaCard link={link} />)}
-    <div class="flex justify-end mt-4">
+    <div class="space-y-6">
+      {links.slice(0, 4).map((link, idx) => (
+        <div class={`reveal stagger-${(idx % 6) + 1} animation-delay-${idx * 100}`}>
+          <div class="experience-card group p-4 sm:p-5 rounded-2xl border border-primary-200/10 bg-bg-200/40 backdrop-blur-sm transition-all duration-500 hover:border-primary-200/30 hover:bg-bg-200/60 hover:shadow-[0_0_40px_rgba(31,58,95,0.2)]">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg sm:text-xl font-bold text-gradient group-hover:text-accent-200 transition-colors duration-300">
+                  {link.position}
+                </h3>
+                <p class="text-accent-200/80 font-medium text-sm sm:text-base">{link.name}</p>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-text-200/70 bg-bg-100/50 px-2 sm:px-3 py-1 rounded-full border border-primary-200/10 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="whitespace-nowrap">{link.startDate.substring(0, 7)} / {link.endDate.substring(0, 7)}</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-text-200/60 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>{link.location}</span>
+            </div>
+
+            <p class="text-text-200/80 text-sm leading-relaxed mb-4 text-left md:text-justify">
+              {link.summary}
+            </p>
+
+            {link.highlights && link.highlights.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                {link.highlights.map((tech) => (
+                  <Chip text={tech} />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal flex justify-end mt-6 gap-3">
       <BordeadoIcon link="#experiencia-more" id="experiencia-more-btn">
-        Ver más experiencias
+        Ver m&aacute;s experiencias
       </BordeadoIcon>
     </div>
-    <div class="hidden" id="experiencia-more">
-      {links.slice(4).map((link, idx) => <ExperienciaCard link={link} />)}
+
+    <div class="hidden space-y-6 mt-6" id="experiencia-more">
+      {links.slice(4).map((link, idx) => (
+        <div class="reveal">
+          <div class="experience-card group p-5 rounded-2xl border border-primary-200/10 bg-bg-200/40 backdrop-blur-sm transition-all duration-500 hover:border-primary-200/30 hover:bg-bg-200/60 hover:shadow-[0_0_40px_rgba(31,58,95,0.2)]">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-gradient group-hover:text-accent-200 transition-colors duration-300">
+                  {link.position}
+                </h3>
+                <p class="text-accent-200/80 font-medium">{link.name}</p>
+              </div>
+              <div class="flex items-center gap-2 text-sm text-text-200/70 bg-bg-100/50 px-3 py-1 rounded-full border border-primary-200/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>{link.startDate.substring(0, 7)} / {link.endDate.substring(0, 7)}</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm text-text-200/60 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>{link.location}</span>
+            </div>
+
+            <p class="text-text-200/80 text-sm leading-relaxed mb-4 text-justify">
+              {link.summary}
+            </p>
+
+            {link.highlights && link.highlights.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                {link.highlights.map((tech) => (
+                  <Chip text={tech} />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
     </div>
+    
     <div class=" justify-end mt-4 hidden" id="experiencia-menos">
       <BordeadoIcon link="#experiencia" id="experiencia-menos-btn">
         Ocultar
@@ -31,26 +111,58 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
     </div>    
   </div>
 </Section>
-<script>
 
-      const btn = document.getElementById("experiencia-more-btn");
-      const more = document.getElementById("experiencia-more");
-      const btnMenos = document.getElementById("experiencia-menos-btn");
-      const menos = document.getElementById("experiencia-menos");
-      if (btn && more && menos) {
-        btn.addEventListener("click", () => {
-          more.classList.remove("hidden");
-          btn.classList.add("hidden");
-          menos.classList.remove("hidden");
-          menos.classList.add("flex");
-        });
-      }
-      if (btnMenos && menos && more) {
-        btnMenos.addEventListener("click", () => {
-          more.classList.add("hidden");
-          btn?.classList.remove("hidden");
-          menos.classList.add("hidden");
-          menos.classList.remove("flex");
-        });
-      }
+<style>
+  .experience-card {
+    position: relative;
+  }
+  
+  .experience-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, #4d648d, #acc2ef);
+    border-radius: 0 3px 3px 0;
+    transition: height 0.4s ease;
+  }
+  
+  .experience-card:hover::before {
+    height: 60%;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-0 { animation-delay: 0ms; }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+</style>
+
+<script>
+  const btn = document.getElementById("experiencia-more-btn");
+  const more = document.getElementById("experiencia-more");
+  const btnMenos = document.getElementById("experiencia-menos-btn");
+  const menos = document.getElementById("experiencia-menos");
+  if (btn && more && menos) {
+    btn.addEventListener("click", () => {
+      more.classList.remove("hidden");
+      btn.classList.add("hidden");
+      menos.classList.remove("hidden");
+      menos.classList.add("flex");
+    });
+  }
+  if (btnMenos && menos && more) {
+    btnMenos.addEventListener("click", () => {
+      more.classList.add("hidden");
+      btn?.classList.remove("hidden");
+      menos.classList.add("hidden");
+      menos.classList.remove("flex");
+    });
+  }
 </script>
