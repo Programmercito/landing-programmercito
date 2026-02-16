@@ -1,5 +1,23 @@
 [
     {
+        "description": "Consulta el precio del USDT en bolivianos en tiempo real con una interfaz clara, rápida y pensada para decisiones al instante. Visualiza variaciones del mercado, compara valores de compra y venta, y mantente siempre informado con datos actualizados al momento.",
+        "url": "https://github.com/Programmercito/cotizaciones_ng",
+        "name": "Cotizacion USDT",
+        "tech": [
+            "Angular",
+            "Typescript",
+            "Go",
+            "Css",
+            "HTML"
+        ],
+        "despliegue": "https://cotizaciones.devcito.org",
+        "images": [
+            "/images/cotizaciones/cero.jpeg",
+            "/images/cotizaciones/uno.jpeg",
+            "/images/cotizaciones/dos.jpeg"
+        ]
+    },
+    {
         "description": "Una interfaz web intuitiva para la administración de pedidos en cafeterías y restaurantes. Simplifica el cálculo de comisiones y ganancias, y optimiza la gestión de tu negocio con una herramienta visual y fácil de usar.",
         "url": "https: //github.com/Programmercito/cafecitos-ng",
         "name": "Web admin Cafes",
@@ -21,7 +39,7 @@
             "/images/webcafes/trece.png",
             "/images/webcafes/catorce.png"
         ]
-    },
+    },    
     {
         "description": "Potencia la gestión de tu cafetería con esta API integral. Desde la creación y seguimiento de órdenes mediante una máquina de estados que controla su ciclo de vida, hasta el cálculo de comisiones y la generación de reportes detallados. Una solución completa para optimizar la administración de tu negocio.",
         "url": "https://github.com/Programmercito/cafecitos",
