@@ -266,7 +266,8 @@ try {
   const btnMenos = document.getElementById("repositorios-menos-btn");
   const menos = document.getElementById("repositorios-menos");
   if (btn && more && menos) {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
       more.classList.remove("hidden");
       btn.classList.add("hidden");
       menos.classList.remove("hidden");
@@ -274,7 +275,8 @@ try {
     });
   }
   if (btnMenos && menos && more) {
-    btnMenos.addEventListener("click", () => {
+    btnMenos.addEventListener("click", (e) => {
+      e.preventDefault();
       more.classList.add("hidden");
       btn?.classList.remove("hidden");
       menos.classList.add("hidden");
