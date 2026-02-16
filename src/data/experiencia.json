@@ -1,5 +1,25 @@
 [
   {
+    "name": "AVLA S.A.",
+    "position": "Desarrollador Full Stack",
+    "startDate": "2024-10-01",
+    "endDate": "",
+    "highlights": [
+      "Java",
+      "Oracle",
+      "SpringBoot",
+      "Microservicios",
+      "NodeJs",
+      "Angular",
+      "TypeScript",
+      "Css",
+      "GIT"
+    ],
+    "summary": "Desarrollo de nuevas características en el sistema de gestión de venta y registro de póliza para los clientes, en diferentes tecnologías como Angular, Java, Spring Boot, Node.js y Oracle, además de la optimización de procesos y mejora de rendimiento del sistema.",
+    "url": "https://www.linkedin.com/company/somosavla",
+    "location": "Chile | Perú | México | Brasil | USA"
+  },
+  {
     "name": "LITERMI",
     "position": "Desarrollador back-end",
     "startDate": "2024-04-30",
@@ -12,7 +32,8 @@
       "JavaScript",
       "NodeJs",
       "TypeScript",
-      "Css", "GIT"
+      "Css",
+      "GIT"
     ],
     "summary": "Desarrollador Full Stack en una startup de iGaming y apuestas (Trillonario, Lotto Kings, Buy Lotto Online). Mis responsabilidades incluyeron el diseño de un sistema de scoring de clientes, el desarrollo de un sistema de gestión de fraudes (FMS) y la integración de métodos de pago. También optimicé interfaces de pago, mejoré el procesamiento de órdenes y administré despliegues en producción. Desarrollé y optimicé cron jobs en Java para mejorar la automatización y eficiencia del sistema.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
@@ -51,7 +72,8 @@
       "JavaScript",
       "NodeJs",
       "TypeScript",
-      "Css","GIT"
+      "Css",
+      "GIT"
     ],
     "summary": "Implementé una nueva solución en la aplicación principal de Telemarketing con PHP y JavaScript, lo que incrementó las ventas de lotería en un 5%.\n\n- Optimicé la pasarela de pagos principal, aumentando la capacidad de procesamiento y, por ende, las ganancias.\n\n- Realicé pruebas de concepto (POC) para reemplazar crones en PHP por crones en AWS Lambda usando Serverless Framework y SAM de Amazon, integrados con Spring Framework, lo que permitió la creación de APIs y crones sin necesidad de más frameworks.\n\n- Desarrollé una funcionalidad para aumentar la capacidad de cobro a través de fees utilizando microservicios con PHP, Node.js y TypeScript.",
     "url": "https://www.linkedin.com/company/litermicreatingchange/",
@@ -135,15 +157,7 @@
     "position": "Desarrollador Outsourcing",
     "startDate": "2006-03-31",
     "endDate": "2008-08-31",
-    "highlights": [
-      "Java",
-      "JSTL",
-      "JSP",
-      "SQL Server",
-      "HTML",
-      "CSS",
-      "SVN"
-    ],
+    "highlights": ["Java", "JSTL", "JSP", "SQL Server", "HTML", "CSS", "SVN"],
     "summary": "Desarrollé el sistema de RRHH, vacaciones, evaluación y planillas.",
     "url": "https://www.linkedin.com/company/food-for-the-hungry-inc/",
     "location": "La Paz, Bolivia"
