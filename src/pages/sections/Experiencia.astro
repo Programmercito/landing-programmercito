@@ -56,7 +56,7 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
     </div>
 
     <div class="reveal flex justify-end mt-6 gap-3">
-      <BordeadoIcon link="#experiencia-more" id="experiencia-more-btn">
+      <BordeadoIcon link="#experiencia-more" id="experiencia-more-btn" target="">
         Ver m&aacute;s experiencias
       </BordeadoIcon>
     </div>
@@ -105,7 +105,7 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
     </div>
     
     <div class=" justify-end mt-4 hidden" id="experiencia-menos">
-      <BordeadoIcon link="#experiencia" id="experiencia-menos-btn">
+      <BordeadoIcon link="#experiencia" id="experiencia-menos-btn" target="">
         Ocultar
       </BordeadoIcon>
     </div>    
@@ -149,22 +149,40 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
   const more = document.getElementById("experiencia-more");
   const btnMenos = document.getElementById("experiencia-menos-btn");
   const menos = document.getElementById("experiencia-menos");
+  
+  function showMore() {
+    more?.classList.remove("hidden");
+    btn?.classList.add("hidden");
+    menos?.classList.remove("hidden");
+    menos?.classList.add("flex");
+  }
+  
+  function hideMore() {
+    more?.classList.add("hidden");
+    btn?.classList.remove("hidden");
+    menos?.classList.add("hidden");
+    menos?.classList.remove("flex");
+  }
+  
   if (btn && more && menos) {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      more.classList.remove("hidden");
-      btn.classList.add("hidden");
-      menos.classList.remove("hidden");
-      menos.classList.add("flex");
+      showMore();
+    });
+    btn.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      showMore();
     });
   }
+  
   if (btnMenos && menos && more) {
     btnMenos.addEventListener("click", (e) => {
       e.preventDefault();
-      more.classList.add("hidden");
-      btn?.classList.remove("hidden");
-      menos.classList.add("hidden");
-      menos.classList.remove("flex");
+      hideMore();
+    });
+    btnMenos.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      hideMore();
     });
   }
 </script>

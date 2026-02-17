@@ -138,7 +138,7 @@ try {
     </div>
     
     <div class="reveal flex justify-end mt-6 gap-3">
-      <BordeadoIcon link="#repositorios-more" id="repositorios-more-btn">
+      <BordeadoIcon link="#repositorios-more" id="repositorios-more-btn" target="">
         Ver m&aacute;s repositorios
       </BordeadoIcon>
     </div>
@@ -212,7 +212,7 @@ try {
     </div>
     
     <div class="justify-end mt-4 hidden" id="repositorios-menos">
-      <BordeadoIcon link="#repositorios" id="repositorios-menos-btn">
+      <BordeadoIcon link="#repositorios" id="repositorios-menos-btn" target="">
         Ocultar
       </BordeadoIcon>
     </div>
@@ -265,22 +265,40 @@ try {
   const more = document.getElementById("repositorios-more");
   const btnMenos = document.getElementById("repositorios-menos-btn");
   const menos = document.getElementById("repositorios-menos");
+  
+  function showMore() {
+    more?.classList.remove("hidden");
+    btn?.classList.add("hidden");
+    menos?.classList.remove("hidden");
+    menos?.classList.add("flex");
+  }
+  
+  function hideMore() {
+    more?.classList.add("hidden");
+    btn?.classList.remove("hidden");
+    menos?.classList.add("hidden");
+    menos?.classList.remove("flex");
+  }
+  
   if (btn && more && menos) {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      more.classList.remove("hidden");
-      btn.classList.add("hidden");
-      menos.classList.remove("hidden");
-      menos.classList.add("flex");
+      showMore();
+    });
+    btn.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      showMore();
     });
   }
+  
   if (btnMenos && menos && more) {
     btnMenos.addEventListener("click", (e) => {
       e.preventDefault();
-      more.classList.add("hidden");
-      btn?.classList.remove("hidden");
-      menos.classList.add("hidden");
-      menos.classList.remove("flex");
+      hideMore();
+    });
+    btnMenos.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      hideMore();
     });
   }
   
