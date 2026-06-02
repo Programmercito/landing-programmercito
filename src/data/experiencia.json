@@ -7,15 +7,15 @@
     "highlights": [
       "Java",
       "Oracle",
-      "SpringBoot",
+      "Spring Boot",
       "Microservicios",
-      "NodeJs",
+      "Node.js",
       "Angular",
       "TypeScript",
-      "Css",
+      "CSS",
       "GIT"
     ],
-    "summary": "Desarrollo de nuevas características en el sistema de gestión de venta y registro de póliza para los clientes, en diferentes tecnologías como Angular, Java, Spring Boot, Node.js y Oracle, además de la optimización de procesos y mejora de rendimiento del sistema.",
+    "summary": "Participé en el desarrollo y mantenimiento del sistema de gestión de ventas y pólizas de AVLA, trabajando con Spring Boot, Oracle y Node.js. Aporté en el diseño e implementación de consultas SQL, modificaciones a los datos en la base de datos, desarrollo de nuevas características con Angular y servicios backend, y corrección de bugs para mejorar la estabilidad y la experiencia del usuario.",
     "url": "https://www.linkedin.com/company/somosavla",
     "location": "Chile | Perú | México | Brasil | USA"
   },
