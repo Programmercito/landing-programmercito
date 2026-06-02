@@ -1,5 +1,39 @@
 [
     {
+        "description": "Sitio de juegos al azar que genera números verdaderamente aleatorios combinando el movimiento del mouse, el estado actual del procesador, los clicks y otras fuentes de entropía del navegador. Incluye ejemplos interactivos que demuestran el uso de estos números en escenarios reales.",
+        "url": "https://github.com/Programmercito/azar-site",
+        "name": "Azar Site",
+        "tech": [
+            "Astro",
+            "JavaScript",
+            "CSS",
+            "Tailwind"
+        ],
+        "despliegue": "https://azar.devcito.org",
+        "images": [
+            "/images/azar/uno.png",
+            "/images/azar/dos.png",
+            "/images/azar/tres.png",
+            "/images/azar/cuatro.png"
+        ]
+    },
+    {
+        "description": "Generador inteligente de paletas de color para interfaces web, construido sobre un algoritmo matemático basado en el espacio HSL y teoría del color (análoga, complementaria, triádica y tetrádica). Crea automáticamente 14 variables semánticas de un Design System garantizando contraste WCAG, dark mode premium y exportación lista para Tailwind v3, Tailwind v4 o CSS nativas.",
+        "url": "https://github.com/Programmercito/colordev",
+        "name": "Armonic Themes",
+        "tech": [
+            "Astro",
+            "JavaScript",
+            "CSS"
+        ],
+        "despliegue": "https://themes.devcito.org",
+        "images": [
+            "/images/themes/uno.png",
+            "/images/themes/dos.png",
+            "/images/themes/tres.png"
+        ]
+    },
+    {
         "description": "Consulta el precio del USDT en bolivianos en tiempo real con una interfaz clara, rápida y pensada para decisiones al instante. Visualiza variaciones del mercado, compara valores de compra y venta, y mantente siempre informado con datos actualizados al momento.",
         "url": "https://github.com/Programmercito/cotizaciones_ng",
         "name": "Cotizacion USDT",
