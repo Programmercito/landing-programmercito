@@ -197,6 +197,15 @@
             "IA",
             "Tailwind"
         ],
-        "despliegue": "https://simulation.devcito.org"
+        "despliegue": "https://simulation.devcito.org",
+        "images": [
+            "/images/simulation/uno.png",
+            "/images/simulation/dos.png",
+            "/images/simulation/tres.png",
+            "/images/simulation/cuatro.png",
+            "/images/simulation/cinco.png",
+            "/images/simulation/seis.png"
+        ]
+
     }
 ]
