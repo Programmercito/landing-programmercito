@@ -186,5 +186,17 @@
             "Sql lite"
         ],
         "despliegue": "https://t.me/amistadbo"
+    },
+    {
+        "description": "Simulador de mundo de animales, tribus, alimento y superviviencia, dale comida a tu tribu y ve como sobrevive o olo ve como se baten para sobrevivir.",
+        "url": "https://github.com/Programmercito/world-simulation",
+        "name": "WorldSimulation",
+        "tech": [
+            "Angular",
+            "Typescript",
+            "IA",
+            "Tailwind"
+        ],
+        "despliegue": "https://simulation.devcito.org"
     }
 ]
