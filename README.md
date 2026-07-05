@@ -5,7 +5,7 @@ Bienvenido a **Programmercito**, tu landing page y portafolio profesional hecho 
 ![Screenshot](./public/images/logo.png)
 
 ---
-
+ 
 ## ✨ Características
 - Diseño responsive y minimalista
 - Secciones de perfil, experiencia, habilidades, proyectos y repositorios
