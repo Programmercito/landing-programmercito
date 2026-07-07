@@ -207,5 +207,20 @@
             "/images/simulation/seis.png"
         ]
 
+    },
+    {
+        "description": "Bot para hacer votaciones de story points",
+        "url": "https://github.com/Programmercito/story-points",
+        "name": "Story Points Bot",
+        "tech": [
+            "Go",
+            "Telegram Api"
+        ],
+        "despliegue": "https://t.me/storypointsbot",
+        "images": [
+            "/images/story/uno.jpeg",
+            "/images/story/dos.jpeg"
+        ]
+
     }
 ]
