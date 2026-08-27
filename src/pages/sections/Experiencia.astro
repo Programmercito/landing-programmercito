@@ -4,6 +4,24 @@ import TitleSection from "../../components/opciones/TitleSection.astro";
 import Section from "../../components/Section.astro";
 import links from "../../data/experiencia.json";
 import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
+
+function formatDuration(startDate: string, endDate: string) {
+  const start = new Date(`${startDate}T00:00:00`);
+  const end = endDate.includes('-') ? new Date(`${endDate}T00:00:00`) : new Date();
+  const totalMonths = Math.max(
+    1,
+    (end.getFullYear() - start.getFullYear()) * 12 + end.getMonth() - start.getMonth() + 1,
+  );
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  const parts = [];
+
+  if (years) parts.push(`${years} ${years === 1 ? 'año' : 'años'}`);
+  if (months || !years) parts.push(`${months} ${months === 1 ? 'mes' : 'meses'}`);
+
+  return parts.join(' y ');
+}
 ---
 
 <Section id="experiencia">
@@ -28,6 +46,11 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span class="whitespace-nowrap">{link.startDate.substring(0, 7)} / {link.endDate.includes('-') ? link.endDate.substring(0, 7) : link.endDate}</span>
+                <span class="h-3 w-px bg-primary-200/30"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 text-accent-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="whitespace-nowrap text-accent-200 font-medium">{formatDuration(link.startDate, link.endDate)}</span>
               </div>
             </div>
             
@@ -77,6 +100,11 @@ import BordeadoIcon from "../../components/opciones/BordeadoIcon.astro";
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span>{link.startDate.substring(0, 7)} / {link.endDate.includes('-') ? link.endDate.substring(0, 7) : link.endDate}</span>
+                <span class="h-3 w-px bg-primary-200/30"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="whitespace-nowrap text-accent-200 font-medium">{formatDuration(link.startDate, link.endDate)}</span>
               </div>
             </div>
             

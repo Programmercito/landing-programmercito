@@ -1,9 +1,26 @@
 [
   {
+    "name": "Devsu",
+    "position": "Desarrollador Backend",
+    "startDate": "2026-03-19",
+    "endDate": "Actualidad",
+    "highlights": [
+      "Java",
+      "Spring Boot",
+      "Microservicios",
+      "Angular",
+      "TypeScript",
+      "GIT"
+    ],
+    "summary": "Desarrollo de microservicios escalables y resilientes, diseñados para interoperar mediante contratos claros y mantener una operación confiable en entornos de producción. Participo en la implementación y publicación de APIs REST orientadas a consumidores externos, priorizando la mantenibilidad y la evolución segura de los servicios. También colaboro de forma puntual en el frontend, apoyando la integración de las interfaces con los servicios backend.",
+    "url": "https://www.linkedin.com/company/devsu",
+    "location": "Ecuador"
+  },  
+  {
     "name": "AVLA S.A.",
     "position": "Desarrollador Full Stack",
-    "startDate": "2024-10-01",
-    "endDate": "Actualidad",
+    "startDate": "2025-10-01",
+    "endDate": "2026-03-18",
     "highlights": [
       "Java",
       "Oracle",
@@ -15,7 +32,7 @@
       "CSS",
       "GIT"
     ],
-    "summary": "Participé en el desarrollo y mantenimiento del sistema de gestión de ventas y pólizas de AVLA, trabajando con Spring Boot, Oracle y Node.js. Aporté en el diseño e implementación de consultas SQL, modificaciones a los datos en la base de datos, desarrollo de nuevas características con Angular y servicios backend, y corrección de bugs para mejorar la estabilidad y la experiencia del usuario.",
+    "summary": "Participé en el desarrollo y mantenimiento del sistema de gestión de ventas y pólizas de AVLA, trabajando con Spring Boot, Oracle y Node.js. Aporté al diseño e implementación de consultas SQL, modificaciones de datos en la base de datos, desarrollo de nuevas funcionalidades con Angular y servicios backend, y corrección de errores para mejorar la estabilidad y la experiencia del usuario. También realicé mejoras en la arquitectura de sistemas públicos con Node.js, la organización de APIs y la seguridad, entre otros aspectos.",
     "url": "https://www.linkedin.com/company/somosavla",
     "location": "Chile | Perú | México | Brasil | USA"
   },

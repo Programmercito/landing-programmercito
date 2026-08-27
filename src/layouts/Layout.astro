@@ -17,11 +17,11 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<script is:inline>
-			// Apply saved or system theme before first paint to avoid FOUC (dark is the default)
+			// Apply the saved theme before first paint; light is the default.
 			(function () {
 				try {
 					var saved = localStorage.getItem('theme');
-					var light = saved ? saved === 'light' : window.matchMedia('(prefers-color-scheme: light)').matches;
+					var light = saved ? saved === 'light' : true;
 					if (light) document.documentElement.classList.add('light');
 				} catch (e) {}
 			})();
