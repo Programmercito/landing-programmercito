@@ -1,28 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		colors: {
 			transparent: 'transparent',
 			primary: {
-				100: '#1F3A5F',
-				200: '#4d648d',
-				300: '#acc2ef',
+				100: 'rgb(var(--c-primary-100) / <alpha-value>)',
+				200: 'rgb(var(--c-primary-200) / <alpha-value>)',
+				300: 'rgb(var(--c-primary-300) / <alpha-value>)',
 			},
 			accent: {
-				100: '#3D5A80',
-				200: '#cee8ff',
+				100: 'rgb(var(--c-accent-100) / <alpha-value>)',
+				200: 'rgb(var(--c-accent-200) / <alpha-value>)',
 			},
 			text: {
-				100: '#FFFFFF',
-				200: '#e0e0e0',
+				100: 'rgb(var(--c-text-100) / <alpha-value>)',
+				200: 'rgb(var(--c-text-200) / <alpha-value>)',
 			},
 			bg: {
-				100: '#0F1C2E',
-				200: '#1f2b3e',
-				300: '#374357'
+				100: 'rgb(var(--c-bg-100) / <alpha-value>)',
+				200: 'rgb(var(--c-bg-200) / <alpha-value>)',
+				300: 'rgb(var(--c-bg-300) / <alpha-value>)'
 			},
-
 		},
 		screens: {
 			sm: '640px',

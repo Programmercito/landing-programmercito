@@ -19,7 +19,7 @@
   <svg class="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(172, 194, 239, 0.5)" stroke-width="0.5"/>
+        <path d="M 60 0 L 0 0 0 60" fill="none" style="stroke: var(--grid-line)" stroke-width="0.5"/>
       </pattern>
     </defs>
     <rect width="100%" height="100%" fill="url(#grid)" />
@@ -29,7 +29,7 @@
   <canvas id="particles-canvas" class="absolute inset-0 w-full h-full" />
   
   {/* Efecto de vignette */}
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,28,46,0.4)_100%)]" />
+  <div class="vignette absolute inset-0" />
 </div>
 
 <style>
@@ -65,10 +65,14 @@
   
   .grid-bg {
     background-image: 
-      linear-gradient(rgba(172, 194, 239, 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(172, 194, 239, 0.5) 1px, transparent 1px);
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
+  }
+
+  .vignette {
+    background: radial-gradient(ellipse at center, transparent 0%, var(--vignette) 100%);
   }
 </style>
 
@@ -88,6 +92,18 @@
     let mouseTimeout = null;
     
     // Configuración ULTRA COOL
+    const palettes = {
+      dark: {
+        colors: ['rgba(172, 194, 239, 0.6)', 'rgba(206, 232, 255, 0.5)', 'rgba(77, 100, 141, 0.5)', 'rgba(61, 90, 128, 0.4)'],
+        lineRgb: '172, 194, 239',
+        lineHighlightRgb: '206, 232, 255'
+      },
+      light: {
+        colors: ['rgba(31, 58, 95, 0.45)', 'rgba(61, 90, 128, 0.4)', 'rgba(74, 114, 176, 0.35)', 'rgba(29, 99, 184, 0.3)'],
+        lineRgb: '31, 58, 95',
+        lineHighlightRgb: '74, 114, 176'
+      }
+    };
     const config = {
       particleCount: window.matchMedia('(pointer: coarse)').matches ? 20 : 40,
       connectionDistance: 180,
@@ -95,9 +111,23 @@
       speed: 0.4,
       mouseRepelDistance: 150,
       mouseRepelForce: 2,
-      colors: ['rgba(172, 194, 239, 0.6)', 'rgba(206, 232, 255, 0.5)', 'rgba(77, 100, 141, 0.5)', 'rgba(61, 90, 128, 0.4)'],
+      colors: palettes.dark.colors,
+      lineRgb: palettes.dark.lineRgb,
+      lineHighlightRgb: palettes.dark.lineHighlightRgb,
       sizes: [1.5, 2, 2.5, 1]
     };
+
+    function currentPaletteKey() {
+      return document.documentElement.classList.contains('light') ? 'light' : 'dark';
+    }
+
+    function applyTheme() {
+      const palette = palettes[currentPaletteKey()];
+      config.colors = palette.colors;
+      config.lineRgb = palette.lineRgb;
+      config.lineHighlightRgb = palette.lineHighlightRgb;
+      init();
+    }
     
     // Resize canvas
     function resize() {
@@ -206,9 +236,9 @@
               particles[i].x, particles[i].y,
               particles[j].x, particles[j].y
             );
-            gradient.addColorStop(0, `rgba(172, 194, 239, ${opacity})`);
-            gradient.addColorStop(0.5, `rgba(206, 232, 255, ${opacity * 1.5})`);
-            gradient.addColorStop(1, `rgba(172, 194, 239, ${opacity})`);
+            gradient.addColorStop(0, `rgba(${config.lineRgb}, ${opacity})`);
+            gradient.addColorStop(0.5, `rgba(${config.lineHighlightRgb}, ${opacity * 1.5})`);
+            gradient.addColorStop(1, `rgba(${config.lineRgb}, ${opacity})`);
             
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -265,7 +295,10 @@
         animate(0);
       }
     });
-    
+
+    // Reaccionar al cambio de tema claro/oscuro
+    window.addEventListener('themechange', applyTheme);
+
     // Inicializar
     resize();
     init();

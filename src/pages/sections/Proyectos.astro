@@ -88,7 +88,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
                         {link.images.map((img, imgIdx) => (
                           <button
                             onclick={`cambiarImagen('${img}', ${idx}, this)`}
-                            class={`thumbnail-btn flex-shrink-0 w-12 h-9 sm:w-16 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 hover:scale-110 scroll-snap-align-start ${imgIdx === 0 ? 'border-primary-200 shadow-[0_0_10px_rgba(172,194,239,0.5)]' : 'border-transparent opacity-70 hover:opacity-100'}`}
+                            class={`thumbnail-btn flex-shrink-0 w-12 h-9 sm:w-16 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-300 hover:scale-110 scroll-snap-align-start ${imgIdx === 0 ? 'border-primary-200 shadow-[0_0_10px_rgb(var(--c-primary-300)/0.5)]' : 'border-transparent opacity-70 hover:opacity-100'}`}
                             aria-label={`Ver imagen ${imgIdx + 1}`}
                           >
                             <img
@@ -232,8 +232,8 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
 <style>
   /* Estilos de la tarjeta de proyecto */
   .project-card {
-    background: linear-gradient(145deg, rgba(31, 43, 62, 0.9) 0%, rgba(15, 28, 46, 0.95) 100%);
-    border: 1px solid rgba(172, 194, 239, 0.15);
+    background: linear-gradient(145deg, rgb(var(--c-bg-200) / 0.9) 0%, rgb(var(--c-bg-100) / 0.95) 100%);
+    border: 1px solid rgb(var(--c-primary-300) / 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 
       0 4px 6px -1px rgba(0, 0, 0, 0.3),
@@ -243,23 +243,23 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
 
   .project-card:hover {
     transform: translateY(-8px) scale(1.01);
-    border-color: rgba(172, 194, 239, 0.4);
+    border-color: rgb(var(--c-primary-300) / 0.4);
     box-shadow: 
       0 20px 40px -10px rgba(31, 58, 95, 0.5),
       0 10px 20px -5px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      0 0 40px rgba(61, 90, 128, 0.2);
+      0 0 40px rgb(var(--c-accent-100) / 0.2);
   }
 
   /* Galería de imágenes */
   .image-gallery {
-    border: 1px solid rgba(172, 194, 239, 0.1);
+    border: 1px solid rgb(var(--c-primary-300) / 0.1);
     transition: all 0.3s ease;
   }
 
   .project-card:hover .image-gallery {
-    border-color: rgba(172, 194, 239, 0.25);
-    box-shadow: 0 0 20px rgba(61, 90, 128, 0.15);
+    border-color: rgb(var(--c-primary-300) / 0.25);
+    box-shadow: 0 0 20px rgb(var(--c-accent-100) / 0.15);
   }
 
   /* Scrollbar de thumbnails */
@@ -272,7 +272,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   }
 
   .gallery-thumbnails::-webkit-scrollbar-thumb {
-    background: #4d648d;
+    background: rgb(var(--c-primary-200));
     border-radius: 2px;
   }
 
@@ -308,7 +308,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
     inset: 0;
     background: radial-gradient(
       600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-      rgba(172, 194, 239, 0.06),
+      rgb(var(--c-primary-300) / 0.06),
       transparent 40%
     );
     opacity: 0;
@@ -323,7 +323,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
 
   /* Estilos adicionales para el modal alucinante */
   dialog::backdrop {
-    background: rgba(15, 28, 46, 0.95);
+    background: rgb(var(--c-bg-100) / 0.95);
     backdrop-filter: blur(10px);
   }
 
@@ -345,10 +345,10 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
   /* Efecto de brillo pulsante en los indicadores */
   @keyframes indicatorPulse {
     0%, 100% {
-      box-shadow: 0 0 5px rgba(206, 232, 255, 0.5);
+      box-shadow: 0 0 5px rgb(var(--c-accent-200) / 0.5);
     }
     50% {
-      box-shadow: 0 0 15px rgba(206, 232, 255, 0.8), 0 0 25px rgba(206, 232, 255, 0.4);
+      box-shadow: 0 0 15px rgb(var(--c-accent-200) / 0.8), 0 0 25px rgb(var(--c-accent-200) / 0.4);
     }
   }
 
@@ -378,7 +378,7 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
     background: linear-gradient(
       45deg,
       transparent 30%,
-      rgba(172, 194, 239, 0.1) 50%,
+      rgb(var(--c-primary-300) / 0.1) 50%,
       transparent 70%
     );
     transform: translateX(-100%);
@@ -442,11 +442,11 @@ import DeployIcon from "../../components/icons/DeployIcon.astro";
     const container = btnElement.closest('.gallery-thumbnails');
     if (container) {
       container.querySelectorAll('.thumbnail-btn').forEach(btn => {
-        btn.classList.remove('border-primary-200', 'shadow-[0_0_10px_rgba(172,194,239,0.5)]');
+        btn.classList.remove('border-primary-200', 'shadow-[0_0_10px_rgb(var(--c-primary-300)/0.5)]');
         btn.classList.add('border-transparent', 'opacity-70');
       });
       btnElement.classList.remove('border-transparent', 'opacity-70');
-      btnElement.classList.add('border-primary-200', 'shadow-[0_0_10px_rgba(172,194,239,0.5)]');
+      btnElement.classList.add('border-primary-200', 'shadow-[0_0_10px_rgb(var(--c-primary-300)/0.5)]');
     }
   }
 

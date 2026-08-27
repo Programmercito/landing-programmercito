@@ -13,7 +13,7 @@ const { link, text, width,id } = Astro.props;
         href={link}  id={id}       class={`
             nav-link ${width}-width
             relative inline-flex items-center justify-center
-            font-semibold tracking-wide text-gray-700 dark:text-gray-300
+            font-semibold tracking-wide text-text-200
             py-2 px-4 mx-0
             rounded-lg 
             transition-all duration-300 ease-in-out
@@ -73,7 +73,7 @@ const { link, text, width,id } = Astro.props;
         left: 50%;
         width: 0;
         height: 2px;
-        background: linear-gradient(90deg, #eaebec, #eaebec);
+        background: linear-gradient(90deg, rgb(var(--c-primary-300)), rgb(var(--c-primary-300)));
         transition: all 0.3s ease;
         transform: translateX(-50%);
     }
