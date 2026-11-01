@@ -1,0 +1,245 @@
+<dialog class="project-viewer" aria-labelledby="viewer-title">
+  <div class="viewer-shell">
+    <header class="viewer-header">
+      <div>
+        <h2 id="viewer-title"></h2>
+      </div>
+      <button type="button" class="viewer-close viewer-control" aria-label="Cerrar visor">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6l12 12M18 6 6 18" stroke-linecap="round" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="viewer-stage">
+      <img class="viewer-image" alt="" />
+      <button type="button" class="viewer-previous viewer-control" aria-label="Imagen anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m15 18-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <button type="button" class="viewer-next viewer-control" aria-label="Imagen siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="viewer-footer">
+      <p class="viewer-counter" aria-live="polite"></p>
+      <div class="viewer-indicators" role="group" aria-label="Imágenes del proyecto"></div>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  .project-viewer {
+    width: fit-content;
+    height: fit-content;
+    max-width: 96vw;
+    max-height: 92dvh;
+    padding: 0;
+    border: 0;
+    border-radius: 1.25rem;
+    color: rgb(var(--c-text-100));
+    background: rgba(5, 12, 23, 0.96);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
+  .project-viewer[open] {
+    animation: viewer-entrance 220ms ease-out;
+  }
+
+  @keyframes viewer-entrance {
+    from { opacity: 0; transform: translateY(8px) scale(0.985); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .project-viewer::backdrop {
+    background: rgba(4, 12, 24, 0.82);
+    backdrop-filter: blur(8px);
+  }
+
+  .viewer-shell { position: relative; }
+  .viewer-header { position: absolute; z-index: 1; inset: 0.75rem 0.75rem auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; pointer-events: none; }
+  .viewer-header > div, .viewer-close { pointer-events: auto; }
+  #viewer-title { padding: 0.5rem 0.75rem; border-radius: 0.6rem; color: #fff; background: rgba(15, 28, 46, 0.82); font-size: 0.85rem; font-weight: 700; }
+  .viewer-control { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; flex-shrink: 0; border-radius: 50%; color: #fff; background: rgba(15, 28, 46, 0.82); backdrop-filter: blur(8px); transition: background 180ms ease; }
+  .viewer-control:hover { background: rgba(31, 58, 95, 0.96); }
+  .viewer-control:focus-visible, .viewer-indicators :global(button:focus-visible) { outline: 3px solid rgb(var(--c-primary-300)); outline-offset: 2px; }
+  .viewer-control svg { width: 1.25rem; height: 1.25rem; }
+
+  .viewer-stage { position: relative; touch-action: pan-y; }
+  .viewer-image { display: block; width: auto; height: auto; max-width: min(96vw, 1280px); max-height: 92dvh; object-fit: contain; }
+  .viewer-previous, .viewer-next { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; background: rgba(15, 28, 46, 0.85); }
+  .viewer-previous { left: 0.75rem; }
+  .viewer-next { right: 0.75rem; }
+  .viewer-previous[hidden], .viewer-next[hidden] { display: none; }
+
+  .viewer-footer { position: absolute; bottom: 0.75rem; left: 50%; display: flex; align-items: center; gap: 0.65rem; max-width: calc(100% - 1.5rem); padding: 0.4rem 0.65rem; border-radius: 999px; background: rgba(15, 28, 46, 0.85); transform: translateX(-50%); }
+  .viewer-counter { flex-shrink: 0; color: #fff; font-size: 0.75rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .viewer-indicators { display: flex; gap: 0.15rem; overflow-x: auto; }
+  .viewer-indicators :global(button) { display: grid; place-items: center; flex: 0 0 1.1rem; width: 1.1rem; height: 1.5rem; }
+  .viewer-indicators :global(button)::before { content: ''; width: 0.4rem; height: 0.4rem; border-radius: 999px; background: rgba(255, 255, 255, 0.5); transition: background 180ms ease, width 180ms ease; }
+  .viewer-indicators :global(button[aria-current="true"])::before { width: 0.75rem; background: #fff; }
+
+  @media (max-width: 639px) {
+    .viewer-header { inset: 0.5rem 0.5rem auto; }
+    .viewer-previous { left: 0.4rem; }
+    .viewer-next { right: 0.4rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .project-viewer[open] { animation: none; }
+    .viewer-control, .viewer-indicators :global(button)::before { transition: none; }
+  }
+</style>
+
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>('.project-viewer');
+  const title = viewer?.querySelector<HTMLElement>('#viewer-title');
+  const image = viewer?.querySelector<HTMLImageElement>('.viewer-image');
+  const counter = viewer?.querySelector<HTMLElement>('.viewer-counter');
+  const indicators = viewer?.querySelector<HTMLElement>('.viewer-indicators');
+  const previous = viewer?.querySelector<HTMLButtonElement>('.viewer-previous');
+  const next = viewer?.querySelector<HTMLButtonElement>('.viewer-next');
+  const close = viewer?.querySelector<HTMLButtonElement>('.viewer-close');
+  const stage = viewer?.querySelector<HTMLElement>('.viewer-stage');
+
+  if (!viewer || !title || !image || !counter || !indicators || !previous || !next || !close || !stage) {
+    throw new Error('No se pudo iniciar el visor de proyectos');
+  }
+
+  type Gallery = {
+    name: string;
+    images: string[];
+    index: number;
+    preview: HTMLImageElement;
+    count: HTMLElement;
+  };
+
+  let active: Gallery | undefined;
+  let originalOverflow = '';
+  const transitions = new WeakMap<HTMLImageElement, Animation>();
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function animateImage(target: HTMLImageElement, direction: number) {
+    transitions.get(target)?.cancel();
+    if (reducedMotion.matches) return;
+    const transition = target.animate(
+      [
+        { opacity: 0.55, transform: `translateX(${direction * 20}px) scale(0.99)` },
+        { opacity: 1, transform: 'translateX(0) scale(1)' },
+      ],
+      { duration: 300, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+    );
+    transitions.set(target, transition);
+  }
+
+  function enableSwipe(target: HTMLElement, onSwipe: (direction: number) => void) {
+    let start: { x: number; y: number } | undefined;
+    target.addEventListener('touchstart', event => {
+      const touch = event.touches[0];
+      if (event.touches.length === 1 && touch) start = { x: touch.clientX, y: touch.clientY };
+      else start = undefined;
+    }, { passive: true });
+    target.addEventListener('touchend', event => {
+      const touch = event.changedTouches[0];
+      if (touch && start) {
+        const dx = touch.clientX - start.x;
+        const dy = touch.clientY - start.y;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+          if (event.cancelable) event.preventDefault();
+          onSwipe(dx < 0 ? 1 : -1);
+        }
+      }
+      start = undefined;
+    });
+    target.addEventListener('touchcancel', () => { start = undefined; });
+  }
+
+  function updateGallery(gallery: Gallery) {
+    gallery.preview.src = gallery.images[gallery.index];
+    gallery.preview.alt = `${gallery.name}, imagen ${gallery.index + 1} de ${gallery.images.length}`;
+    gallery.count.textContent = `${gallery.index + 1} / ${gallery.images.length}`;
+  }
+
+  function updateViewer(gallery: Gallery) {
+    title!.textContent = gallery.name;
+    image!.src = gallery.images[gallery.index];
+    image!.alt = `${gallery.name}, imagen ${gallery.index + 1} de ${gallery.images.length}`;
+    counter!.textContent = `${gallery.index + 1} / ${gallery.images.length}`;
+    previous!.hidden = next!.hidden = gallery.images.length <= 1;
+    indicators!.querySelectorAll<HTMLButtonElement>('button').forEach((button, index) => {
+      if (index === gallery.index) button.setAttribute('aria-current', 'true');
+      else button.removeAttribute('aria-current');
+    });
+    const selected = indicators!.querySelector<HTMLButtonElement>('button[aria-current="true"]');
+    selected?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+
+  function move(gallery: Gallery, index: number) {
+    const nextIndex = (index + gallery.images.length) % gallery.images.length;
+    if (nextIndex === gallery.index) return;
+    const direction = index > gallery.index ? 1 : -1;
+    gallery.index = nextIndex;
+    updateGallery(gallery);
+    animateImage(gallery.preview, direction);
+    if (viewer!.open && active === gallery) {
+      updateViewer(gallery);
+      animateImage(image!, direction);
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('.project-gallery').forEach(element => {
+    const preview = element.querySelector<HTMLImageElement>('.gallery-open img');
+    const count = element.querySelector<HTMLElement>('.gallery-count');
+    const open = element.querySelector<HTMLButtonElement>('.gallery-open');
+    const name = element.dataset.project;
+    const rawImages = element.dataset.images;
+    if (!preview || !count || !open || !name || !rawImages) throw new Error('Galería de proyecto incompleta');
+    const images: unknown = JSON.parse(rawImages);
+    if (!Array.isArray(images) || images.length === 0 || !images.every(item => typeof item === 'string')) {
+      throw new Error(`Imágenes inválidas para ${name}`);
+    }
+    const gallery: Gallery = { name, images, index: 0, preview, count };
+    element.querySelector('.gallery-previous')?.addEventListener('click', () => move(gallery, gallery.index - 1));
+    element.querySelector('.gallery-next')?.addEventListener('click', () => move(gallery, gallery.index + 1));
+    enableSwipe(element, direction => move(gallery, gallery.index + direction));
+    open.addEventListener('click', () => {
+      active = gallery;
+      indicators.replaceChildren();
+      gallery.images.forEach((_, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Ver imagen ${index + 1} de ${gallery.images.length}`);
+        button.addEventListener('click', () => move(gallery, index));
+        indicators.append(button);
+      });
+      updateViewer(gallery);
+      originalOverflow = document.body.style.overflow;
+      viewer.showModal();
+      document.body.style.overflow = 'hidden';
+      close.focus();
+    });
+  });
+
+  previous.addEventListener('click', () => { if (active) move(active, active.index - 1); });
+  next.addEventListener('click', () => { if (active) move(active, active.index + 1); });
+  close.addEventListener('click', () => viewer.close());
+  viewer.addEventListener('close', () => { document.body.style.overflow = originalOverflow; });
+  viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+  viewer.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      viewer.close();
+      return;
+    }
+    if (!active || active.images.length <= 1 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      move(active, active.index + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
+  enableSwipe(stage, direction => { if (active) move(active, active.index + direction); });
+</script>
