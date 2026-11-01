@@ -11,10 +11,10 @@
         ],
         "despliegue": "https://azar.devcito.org",
         "images": [
-            "/images/azar/uno.png",
-            "/images/azar/dos.png",
-            "/images/azar/tres.png",
-            "/images/azar/cuatro.png"
+            "/images/azar/actual-uno.jpg",
+            "/images/azar/actual-dos.jpg",
+            "/images/azar/actual-tres.jpg",
+            "/images/azar/actual-cuatro.jpg"
         ]
     },
     {
@@ -28,9 +28,9 @@
         ],
         "despliegue": "https://themes.devcito.org",
         "images": [
-            "/images/themes/uno.png",
-            "/images/themes/dos.png",
-            "/images/themes/tres.png"
+            "/images/themes/actual-uno.jpg",
+            "/images/themes/actual-dos.jpg",
+            "/images/themes/actual-tres.jpg"
         ]
     },
     {
@@ -46,9 +46,8 @@
         ],
         "despliegue": "https://cotizaciones.devcito.org",
         "images": [
-            "/images/cotizaciones/cero.jpeg",
-            "/images/cotizaciones/uno.jpeg",
-            "/images/cotizaciones/dos.jpeg"
+            "/images/cotizaciones/actual-uno.jpg",
+            "/images/cotizaciones/actual-dos.jpg"
         ]
     },
     {
@@ -102,10 +101,9 @@
         ],
         "despliegue": "https://tools.devcito.org",
         "images": [
-            "/images/tools/uno.png",
-            "/images/tools/dos.png",
-            "/images/tools/tres.png",
-            "/images/tools/cuatro.png"
+            "/images/tools/actual-uno.jpg",
+            "/images/tools/actual-dos.jpg",
+            "/images/tools/actual-tres.jpg"
         ]
     },
     {
@@ -118,11 +116,8 @@
         ],
         "despliegue": "https://cine.devcito.org",
         "images": [
-            "/images/cine/uno.jpg",
-            "/images/cine/dos.jpg",
-            "/images/cine/tres.jpg",
-            "/images/cine/cuatro.jpg",
-            "/images/cine/cinco.jpg"
+            "/images/cine/actual-uno.jpg",
+            "/images/cine/actual-dos.jpg"
         ]
     },
     {
@@ -199,12 +194,8 @@
         ],
         "despliegue": "https://simulation.devcito.org",
         "images": [
-            "/images/simulation/uno.png",
-            "/images/simulation/dos.png",
-            "/images/simulation/tres.png",
-            "/images/simulation/cuatro.png",
-            "/images/simulation/cinco.png",
-            "/images/simulation/seis.png"
+            "/images/simulation/actual-uno.jpg",
+            "/images/simulation/actual-dos.jpg"
         ]
 
     },
