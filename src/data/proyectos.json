@@ -1,5 +1,21 @@
 [
     {
+        "description": "CLI para Windows que permite instalar, administrar y cambiar entre versiones de herramientas como Java, Maven, Gradle, PHP, Go, Node.js y pnpm. Automatiza la configuración del PATH y las variables de entorno, e incluye diagnóstico y activación de herramientas por proyecto.",
+        "url": "https://github.com/Programmercito/switcher-version-tools",
+        "name": "switchtool",
+        "tech": [
+            "Go",
+            "Windows",
+            "CLI"
+        ],
+        "despliegue": "https://switch.devcito.org",
+        "images": [
+            "/images/switchtool/inicio.jpg",
+            "/images/switchtool/funciones.jpg",
+            "/images/switchtool/uso.jpg"
+        ]
+    },
+    {
         "description": "Sitio de juegos al azar que genera números verdaderamente aleatorios combinando el movimiento del mouse, el estado actual del procesador, los clicks y otras fuentes de entropía del navegador. Incluye ejemplos interactivos que demuestran el uso de estos números en escenarios reales.",
         "url": "https://github.com/Programmercito/azar-site",
         "name": "Azar Site",
