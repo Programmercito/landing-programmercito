@@ -213,5 +213,37 @@
             "/images/story/dos.jpeg"
         ]
 
+    },
+    {
+        "description": "Aplicación gratuita para verificar billetes de la Serie B en Bolivia. Permite escanear números de serie con la cámara y consultar los rangos de billetes inválidos, procesando los datos localmente en el navegador.",
+        "url": "https://github.com/Programmercito/series-ilegales-ng",
+        "name": "Verificador de Billetes Serie B",
+        "tech": [
+            "Angular",
+            "TypeScript",
+            "Tesseract.js"
+        ],
+        "despliegue": "https://vseriesb.devcito.org/",
+        "images": [
+            "/images/seriesb/actual-uno.jpg",
+            "/images/seriesb/actual-dos.jpg",
+            "/images/seriesb/actual-tres.jpg"
+        ]
+    },
+    {
+        "description": "Generador gratuito de códigos QR personalizados que permite crear diseños adaptados a tu estilo directamente en el navegador, sin necesidad de un servidor.",
+        "url": "https://github.com/Programmercito/qr-generator",
+        "name": "Qreative",
+        "tech": [
+            "Astro",
+            "JavaScript",
+            "Tailwind"
+        ],
+        "despliegue": "https://qr.devcito.org/",
+        "images": [
+            "/images/qreative/actual-uno.jpg",
+            "/images/qreative/actual-dos.jpg",
+            "/images/qreative/actual-tres.jpg"
+        ]
     }
 ]
